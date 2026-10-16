@@ -230,72 +230,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // =========================================================================
-  // 2. GROUP MEMBERS SMALL PHOTO OPTION & LOCALSTORAGE PERSISTENCE
+  // 2. GROUP MEMBERS PROFILE PHOTOS
+  // Photos are served from assets/images/members/<name>.jpg.
+  // Public visitors cannot edit or upload photos.
   // =========================================================================
-  const photoInputs = document.querySelectorAll('.photo-upload-input');
-  const resetButtons = document.querySelectorAll('.photo-reset-btn');
-
-  // Load existing photos from localStorage
   document.querySelectorAll('.member-photo').forEach(photoDiv => {
     const targetId = photoDiv.id;
     if (!targetId) return;
     const savedPhoto = localStorage.getItem(`member_photo_${targetId}`);
     if (savedPhoto) {
-      photoDiv.innerHTML = `<img src="${savedPhoto}" alt="Member Photo" class="custom-avatar-img">`;
-      photoDiv.classList.add('has-photo');
+      const existingImg = photoDiv.querySelector('.custom-avatar-img');
+      if (existingImg) {
+        existingImg.src = savedPhoto;
+      }
     }
-  });
-
-  // Handle Photo File Upload
-  photoInputs.forEach(input => {
-    input.addEventListener('change', (e) => {
-      const file = e.target.files && e.target.files[0];
-      const targetId = input.getAttribute('data-target');
-      if (!file || !targetId) return;
-
-      const photoDiv = document.getElementById(targetId);
-      if (!photoDiv) return;
-
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const dataUrl = event.target.result;
-        photoDiv.innerHTML = `<img src="${dataUrl}" alt="Member Photo" class="custom-avatar-img">`;
-        photoDiv.classList.add('has-photo');
-
-        try {
-          localStorage.setItem(`member_photo_${targetId}`, dataUrl);
-          showToast('Profile photo updated successfully!');
-        } catch (storageErr) {
-          console.warn('Storage limit reached, photo active in session:', storageErr);
-          showToast('Photo updated (session active)!');
-        }
-      };
-      reader.readAsDataURL(file);
-    });
-  });
-
-  // Handle Photo Reset
-  resetButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-target');
-      if (!targetId) return;
-
-      const photoDiv = document.getElementById(targetId);
-      if (!photoDiv) return;
-
-      localStorage.removeItem(`member_photo_${targetId}`);
-      photoDiv.classList.remove('has-photo');
-
-      const initials = photoDiv.getAttribute('data-initials') || 'NS';
-      const iconClass = photoDiv.getAttribute('data-icon') || 'fa-user-tie';
-      photoDiv.innerHTML = `
-        <div class="avatar-fallback">
-          <i class="fa-solid ${iconClass}"></i>
-          <span class="avatar-initials">${initials}</span>
-        </div>
-      `;
-      showToast('Photo reset to default avatar.');
-    });
   });
 
 

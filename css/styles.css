@@ -1058,11 +1058,11 @@ body {
   color: #ffffff;
 }
 
-/* Group Members Grid & Small Photo Option */
+/* Group Members Grid & Centered Profile Cards */
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 2.5rem;
 }
@@ -1070,11 +1070,12 @@ body {
 .member-card {
   background: rgba(4, 9, 20, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 1.3rem;
+  border-radius: 16px;
+  padding: 1.75rem 1.4rem;
   display: flex;
-  gap: 1.1rem;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   transition: var(--trans);
   position: relative;
 }
@@ -1082,30 +1083,39 @@ body {
 .member-card:hover {
   background: rgba(6, 14, 28, 0.95);
   border-color: rgba(255, 122, 0, 0.35);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .member-card.leader-card {
   grid-column: 1 / -1;
   border-color: rgba(255, 122, 0, 0.45);
-  background: linear-gradient(135deg, rgba(255, 122, 0, 0.07) 0%, rgba(4, 9, 20, 0.92) 100%);
+  background: linear-gradient(135deg, rgba(255, 122, 0, 0.08) 0%, rgba(4, 9, 20, 0.95) 100%);
+  padding: 2.2rem 2rem;
+  box-shadow: 0 0 35px rgba(255, 122, 0, 0.12);
 }
 
-/* Small Photo Frame & Controls */
+/* Bigger, Centered Profile Photo Frame */
 .member-photo-wrapper {
   position: relative;
   flex-shrink: 0;
-  width: 76px;
-  height: 76px;
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 1.25rem auto;
+}
+
+.member-card.leader-card .member-photo-wrapper {
+  width: 136px;
+  height: 136px;
 }
 
 .member-photo {
-  width: 76px;
-  height: 76px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 122, 0, 0.2) 0%, rgba(3, 7, 18, 0.9) 80%);
-  border: 2px solid var(--color-orange);
-  box-shadow: 0 0 14px rgba(255, 122, 0, 0.3);
+  background: radial-gradient(circle, rgba(255, 122, 0, 0.22) 0%, rgba(3, 7, 18, 0.95) 80%);
+  border: 3px solid var(--color-orange);
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1114,136 +1124,105 @@ body {
   transition: var(--trans);
 }
 
+.member-card:hover .member-photo {
+  transform: scale(1.04);
+}
+
 .member-photo.cyan-ring {
   border-color: var(--color-cyan);
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35), 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .member-photo.red-ring {
   border-color: var(--color-red);
-  box-shadow: 0 0 14px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.35), 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .custom-avatar-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  border-radius: 50%;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.custom-avatar-img.img-error {
+  display: none !important;
 }
 
 .avatar-fallback {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--text-primary);
   text-align: center;
+  z-index: 1;
 }
 
 .avatar-fallback i {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   color: var(--color-orange-bright);
+}
+
+.member-card.leader-card .avatar-fallback i {
+  font-size: 2.7rem;
 }
 
 .avatar-initials {
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-top: 0.15rem;
-}
-
-/* Small Photo Upload Button & Reset Button */
-.photo-upload-label {
-  position: absolute;
-  bottom: -2px;
-  right: -2px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--color-orange);
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 0.72rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  transition: var(--trans);
-  z-index: 2;
-}
-
-.photo-upload-label:hover {
-  background: #ffffff;
-  transform: scale(1.1);
-}
-
-.photo-upload-input {
-  display: none;
-}
-
-.photo-reset-btn {
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-secondary);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 0.6rem;
-  transition: var(--trans);
-  z-index: 2;
-}
-
-.member-photo.has-photo + .photo-upload-label + .photo-reset-btn {
-  display: flex;
-}
-
-.photo-reset-btn:hover {
-  background: var(--color-red);
-  color: #ffffff;
+  letter-spacing: 0.08em;
+  margin-top: 0.35rem;
+  color: var(--text-white);
 }
 
 .member-content {
-  flex: 1;
-  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .member-header-row {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-bottom: 0.25rem;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .member-name {
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-white);
+}
+
+.member-card.leader-card .member-name {
+  font-size: 1.35rem;
 }
 
 .member-status-tag {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 600;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
   background: rgba(255, 122, 0, 0.12);
   color: var(--color-orange);
   border: 1px solid rgba(255, 122, 0, 0.25);
 }
 
 .member-title {
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   font-weight: 500;
   color: var(--color-cyan);
   margin-bottom: 0.25rem;
@@ -1251,32 +1230,34 @@ body {
 
 .member-affil {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.75rem;
 }
 
 .member-topics {
-  font-size: 0.79rem;
+  font-size: 0.82rem;
   color: #cbd5e1;
-  line-height: 1.45;
-  margin-bottom: 0.65rem;
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+  max-width: 600px;
 }
 
 .member-tags {
   display: flex;
-  gap: 0.35rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .member-tag {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  padding: 0.15rem 0.45rem;
-  border-radius: 4px;
+  font-size: 0.68rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ==========================================================================
