@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neutron star 3D — Dense-Matter Astrophysics & Structure</title>
+  
+  <!-- Scientific Typography: Space Grotesk + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- KaTeX CSS for High-Precision Mathematical Typesetting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- FIXED 3D CANVAS BACKGROUND -->
+  <div id="webgl-container"></div>
+
+  <!-- FIXED TOP NAVIGATION HEADER -->
+  <header class="site-header">
+    <div class="brand-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+      <div class="pulsar-core-icon"></div>
+      <div class="brand-name">Neutron star <span>3D</span></div>
+    </div>
+
+    <nav class="header-nav">
+      <a href="#overview" class="nav-link active">Overview</a>
+      <a href="#formation" class="nav-link">Formation</a>
+      <a href="#structure" class="nav-link">Structure</a>
+      <a href="#vortex" class="nav-link">Vortex Pinning</a>
+      <a href="#cooling" class="nav-link">Cooling Curves</a>
+      <a href="#dark-heating" class="nav-link">Dark Kinetic Heating</a>
+      <a href="#research" class="nav-link">Softwares & Data</a>
+    </nav>
+
+    <div class="header-controls">
+      <button id="audio-toggle-btn" class="icon-btn" title="Toggle Synthesized Cosmic Drone & Pulsar Audio (M)">
+        <i class="fa-solid fa-volume-xmark"></i>
+      </button>
+      <button id="fullscreen-toggle-btn" class="icon-btn" title="Toggle Fullscreen">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- FLOATING BOTTOM 3D CONTROLS DOCK -->
+  <div class="viewport-dock">
+    <div class="dock-item">
+      <span class="dock-label"><i class="fa-solid fa-scissors"></i> Cutaway:</span>
+      <input type="range" id="dock-cutaway-slider" class="dock-slider" min="0" max="180" value="90" title="Adjust Cutaway Wedge Angle (C)">
+    </div>
+
+    <button id="dock-bfield-btn" class="dock-btn active" title="Toggle Magnetic Sheath Loops (B)">
+      <i class="fa-solid fa-magnet"></i> B-Field Loops
+    </button>
+
+    <button id="dock-spin-btn" class="dock-btn active" title="Pause or Resume Stellar Rotation (Space)">
+      <i class="fa-solid fa-pause"></i> Pause
+    </button>
+
+    <button id="dock-reset-btn" class="dock-btn" title="Reset Camera View">
+      <i class="fa-solid fa-rotate-left"></i> Reset
+    </button>
+  </div>
+
+  <!-- MAIN SCROLLABLE PAGES (Wide Minimalistic Cards) -->
+  <main class="page-container">
+
+    <!-- =========================================================================
+         PAGE 0: OVERVIEW
+         ========================================================================= -->
+    <section id="overview" class="content-section align-left" data-section="overview">
+      <div class="minimal-card" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Astrophysical Laboratory of Dense Matter</span>
+        <h1 class="section-title">Neutron star <span class="orange">3D</span></h1>
+        <p class="section-subtitle">A laboratory of extreme gravity, quantum matter, and magnetic fields</p>
+
+        <p class="section-p">
+          A <strong class="text-orange">neutron star</strong> is an extraordinarily compact stellar remnant formed during the core-collapse supernova of a massive star ($M_{\text{ZAMS}} \approx 8 - 25 M_\odot$).
+          It compresses roughly <strong class="text-white">1.4 to 2.1 solar masses</strong> into a sphere only <strong class="text-orange">10 to 12 kilometers</strong> in radius.
+        </p>
+
+        <p class="section-p">
+          Its interior reaches densities comparable to and above nuclear saturation density ($\rho_0 \approx 2.8 \times 10^{14}\text{ g/cm}^3$), making neutron stars unique cosmic laboratories connecting subatomic nuclear physics with Einstein's general relativity.
+        </p>
+
+        <div class="param-grid">
+          <div class="param-box">
+            <div class="param-lbl">Typical Mass</div>
+            <div class="param-val text-orange">~ 1.4 – 2.1 M☉</div>
+          </div>
+          <div class="param-box">
+            <div class="param-lbl">Stellar Radius</div>
+            <div class="param-val text-white">10 – 12 km</div>
+          </div>
+          <div class="param-box">
+            <div class="param-lbl">Central Density</div>
+            <div class="param-val text-red">> 2 – 8 n_sat</div>
+          </div>
+          <div class="param-box">
+            <div class="param-lbl">Escape Speed</div>
+            <div class="param-val text-cyan">~ 0.6 c</div>
+          </div>
+        </div>
+
+        <div class="formula-card">
+          <div class="formula-lbl">Relativistic Compactness Formula</div>
+          <div class="katex-formula" data-formula="C = \frac{GM}{R c^2} \approx 0.15 - 0.25"></div>
+        </div>
+
+        <div class="btn-group">
+          <a href="#formation" class="btn-primary">
+            <i class="fa-solid fa-arrow-down"></i> Formation of Neutron Star
+          </a>
+          <a href="#structure" class="btn-secondary">
+            <i class="fa-solid fa-layer-group"></i> Star Structure
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 1: FORMATION OF THE NEUTRON STAR (With Black Hole Background!)
+         ========================================================================= -->
+    <section id="formation" class="content-section" data-section="formation">
+      <div class="minimal-card wide black-hole-bg-page" style="--card-accent: var(--color-red);">
+        <span class="section-tag red">Stellar Evolution & Collapse</span>
+        <h2 class="section-title">Formation of a <span class="red">Neutron Star</span></h2>
+        <p class="section-subtitle">From Massive Progenitor Star to Core Collapse Supernova & Black Hole Boundary</p>
+
+        <div class="grid-2col-wide">
+          <div>
+            <p class="section-p">
+              The birth of a neutron star represents one of the most violent and energetic events in the universe:
+            </p>
+
+            <ul class="section-p" style="padding-left: 1.25rem;">
+              <li>
+                <strong class="text-orange">1. Massive Star Life Cycle:</strong> Stars with initial masses between $8$ and $25 M_\odot$ fuse hydrogen into helium, then proceed through carbon, neon, oxygen, and silicon burning stages, forming an onion-like shell structure with an inert iron core.
+              </li>
+              <li>
+                <strong class="text-red">2. The Iron Catastrophe:</strong> Iron-group nuclei ($^{56}\text{Fe}$) have the highest nuclear binding energy per nucleon. Further fusion is endothermic and cannot support the star against gravity.
+              </li>
+              <li>
+                <strong class="text-orange">3. Gravitational Core Collapse:</strong> Once the iron core surpasses the <em>Chandrasekhar mass limit</em> ($M_{\text{Ch}} \approx 1.4 M_\odot$), electron degeneracy pressure fails. The core plummets inward at $23\%\text{ of light speed}$ in under a second!
+              </li>
+              <li>
+                <strong class="text-cyan">4. Photodisintegration & Neutronization:</strong> Gamma rays shatter iron nuclei, and energetic electrons are forced into protons via electron capture:
+                <div class="formula-card red-border" style="margin: 0.6rem 0;">
+                  <div class="formula-lbl">Neutronization Reaction & Neutrino Burst</div>
+                  <div class="katex-formula" data-formula="e^- + p \longrightarrow n + \nu_e \quad (\sim 10^{53} \text{ ergs in neutrinos})"></div>
+                </div>
+              </li>
+              <li>
+                <strong class="text-white">5. Core Bounce Supernova:</strong> When central density reaches nuclear saturation ($\rho_0 \approx 2.8 \times 10^{14}\text{ g/cm}^3$), repulsive strong nuclear forces halt collapse. The core rebounds, driving a shockwave that expels outer stellar layers as a Type II supernova.
+              </li>
+            </ul>
+
+            <div class="param-grid" style="margin-top: 1rem;">
+              <div class="param-box">
+                <div class="param-lbl">Progenitor Mass</div>
+                <div class="param-val text-orange">8 – 25 M☉</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Remnant Mass</div>
+                <div class="param-val text-white">1.4 – 2.1 M☉</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Neutrino Energy</div>
+                <div class="param-val text-red">~ 10⁵³ ergs</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Birth Core Temp</div>
+                <div class="param-val text-cyan">~ 10¹¹ K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stellar Life Cycle & Black Hole Images -->
+          <div>
+            <div class="img-frame">
+              <img src="assets/images/stellar_lifecycle.jpg" alt="Life Cycle of a Star: Massive Star to Supernova, Neutron Star, and Black Hole">
+              <div class="img-caption">
+                <strong class="text-orange">Figure 1:</strong> Stellar evolution branch comparing average stars (yielding White Dwarfs) vs. massive stars (yielding Neutron Stars or Black Holes).
+              </div>
+            </div>
+
+            <div class="img-frame" style="margin-top: 1rem;">
+              <img src="assets/images/black_hole_anatomy.png" alt="Black Hole Anatomy and Accretion Disc">
+              <div class="img-caption" style="font-size: 0.74rem;">
+                <strong class="text-red">Figure 2: Black Hole Boundary.</strong> When core mass exceeds the maximum Tolman-Oppenheimer-Volkoff limit ($M_{\text{core}} > 2.2 - 2.5 M_\odot$), collapse continues indefinitely to form an event horizon and gravitational singularity.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#structure" class="btn-primary">
+            <i class="fa-solid fa-arrow-down"></i> Next: Structure of the Star
+          </a>
+          <a href="#vortex" class="btn-secondary">
+            <i class="fa-solid fa-tornado"></i> Superfluid Vortex Dynamics
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 2: STRUCTURE OF THE STAR (All Information in One Page)
+         ========================================================================= -->
+    <section id="structure" class="content-section" data-section="structure">
+      <div class="minimal-card wide" style="--card-accent: var(--color-cyan);">
+        <span class="section-tag">Anatomy & Radial Stratification</span>
+        <h2 class="section-title">Structure of the <span class="orange">Neutron Star</span></h2>
+        <p class="section-subtitle">Concentric layers from the thin optical atmosphere down to the exotic quantum core (Picture 2 MUSES Model)</p>
+
+        <div class="grid-2col-wide">
+          <!-- Left: Comprehensive Layer Breakdown Matching Picture 2 -->
+          <div class="structure-layer-list">
+            
+            <!-- Layer 1: Atmosphere -->
+            <div class="layer-item-card" style="--layer-color: #38bdf8;">
+              <div class="layer-item-header">
+                <span class="layer-item-title text-cyan">1. ATMOSPHERE</span>
+                <span class="layer-item-specs">Rw = 10⁻⁴ km (~10 cm) | nB &lt; 10⁻⁷ nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Mostly H, He, C.</strong> Thin optical skin determining the emergent thermal X-ray radiation. Intense surface gravity ($10^{14}\text{ cm/s}^2$) rapidly sediments heavy elements. Strong magnetic fields ($10^{12} - 10^{15}\text{ G}$) distort electron orbitals into needle-like cylinders.
+              </div>
+            </div>
+
+            <!-- Layer 2: Outer Crust -->
+            <div class="layer-item-card" style="--layer-color: #60a5fa;">
+              <div class="layer-item-header">
+                <span class="layer-item-title" style="color: #60a5fa;">2. OUTER CRUST</span>
+                <span class="layer-item-specs">Rw = 0.1 km (100 m) | nB &lt; 10⁻³ nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Heavier nuclei, free e⁻.</strong> Ionized nuclei arranged into a solid body-centered cubic (BCC) Coulomb crystal lattice embedded in a degenerate relativistic electron gas. Electron capture drives nuclei from $^{56}\text{Fe}$ to $^{118}\text{Kr}$ until the <em>neutron drip threshold</em> ($\rho_{\text{drip}} \approx 4.3 \times 10^{11}\text{ g/cm}^3$) is reached.
+              </div>
+            </div>
+
+            <!-- Layer 3: Inner Crust & Nuclear Pasta -->
+            <div class="layer-item-card" style="--layer-color: #f59e0b;">
+              <div class="layer-item-header">
+                <span class="layer-item-title text-orange">3. INNER CRUST</span>
+                <span class="layer-item-specs">Rw = 0.5 km (500 m) | nB &lt; 0.5 nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Free neutrons and e⁻, atomic nuclei.</strong> Lattice permeated by unbound neutron superfluid. Near the crust-core boundary, competition between Coulomb repulsion and strong nuclear surface tension produces frustrated <strong class="text-orange">Nuclear Pasta</strong> topologies:
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #fde047; margin-top: 0.35rem;">
+                  🍡 Gnocchi (droplets) → 🥢 Spaghetti (rods) → 🥞 Lasagna (slabs) → 🥖 Penne (tubes) → 🧀 Swiss Cheese (bubbles)
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 4: Outer Core -->
+            <div class="layer-item-card" style="--layer-color: #0284c7;">
+              <div class="layer-item-header">
+                <span class="layer-item-title" style="color: #38bdf8;">4. OUTER CORE</span>
+                <span class="layer-item-specs">Rw ~ 7 km (bulk volume) | nB &lt; 2 nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Neutron rich nuclear matter.</strong> Uniform nucleonic Fermi liquid ($n \sim 90-95\%$, $p \sim 5\%$, relativistic $e^-$ and $\mu^-$) in beta equilibrium ($\mu_n = \mu_p + \mu_e$). Neutrons form $^3P_2$ triplet superfluid while protons form $^1S_0$ singlet Type-II superconductor, threaded by $\sim 10^{19}$ quantized vortex lines.
+              </div>
+            </div>
+
+            <!-- Layer 5: Inner Core -->
+            <div class="layer-item-card" style="--layer-color: #ef4444;">
+              <div class="layer-item-header">
+                <span class="layer-item-title text-red">5. INNER CORE</span>
+                <span class="layer-item-specs">Rw ~ 5 km (Center) | nB &lt; 10 nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Nucleons, Hyperons, Meson Condensates, Deltas, Deconfined Quarks?</strong> Pressures exceed $10^{35}\text{ dyn/cm}^2$. Hadron boundaries melt into free $u, d, s$ quarks in a Color-Flavor Locked (CFL) state, hyperons ($\Lambda, \Sigma, \Xi$), or pion/kaon condensates.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Picture 2 MUSES Diagram & Pulsar Populations -->
+          <div>
+            <div class="img-frame">
+              <img src="assets/images/neutron_star_structure.png" alt="Neutron Star Anatomy: MUSES Cutaway Model showing Atmosphere, Outer Crust, Inner Crust, Outer Core, Inner Core">
+              <div class="img-caption">
+                <strong class="text-cyan">Figure 3:</strong> MUSES structural cross-section of a neutron star with radial widths ($R_W$) and typical baryon densities ($n_B$) normalized to nuclear saturation density ($n_{\text{sat}} \approx 0.16\text{ fm}^{-3}$).
+              </div>
+            </div>
+
+            <div class="img-frame" style="margin-top: 1rem;">
+              <img src="assets/images/pulsar_types_quad.jpg" alt="Four Types of Neutron Stars: Magnetar, X-ray Pulsar, Radio Pulsar, Radio-Quiet">
+              <div class="img-caption" style="font-size: 0.74rem;">
+                <strong class="text-orange">Figure 4: Populations.</strong> Observed classes: Magnetars ($B \sim 10^{15}\text{ G}$), X-ray pulsars, Radio pulsars, and Radio-quiet neutron stars.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#vortex" class="btn-primary">
+            <i class="fa-solid fa-tornado"></i> Next: Vortex Pinning Animation
+          </a>
+          <a href="#cooling" class="btn-secondary">
+            <i class="fa-solid fa-snowflake"></i> Cooling Curves
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 3: SUPERFLUID VORTEX PINNING & GLITCH DYNAMICS (Animation Requested)
+         ========================================================================= -->
+    <section id="vortex" class="content-section" data-section="vortex">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Superfluid Dynamics & Angular Momentum Transfer</span>
+        <h2 class="section-title">Vortex Pinning in <span class="orange">Nuclear Pasta</span> & Glitches</h2>
+        <p class="section-subtitle">How quantized neutron vortices trapped in the inner crust trigger macroscopic pulsar glitches</p>
+
+        <div class="grid-2col-wide">
+          <!-- Left: Interactive Canvas Animation -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+              <span id="vortex-status-badge" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #10b981;">
+                STATUS: Pinned Equilibrium
+              </span>
+              <span id="vortex-jump-readout" class="text-red" style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600;">
+                ΔΩ/Ω = +0.00 × 10⁻⁶
+              </span>
+            </div>
+
+            <!-- Vortex Animation Canvas -->
+            <canvas id="vortex-canvas"></canvas>
+
+            <!-- Controls -->
+            <div style="display: flex; gap: 0.6rem; margin-top: 0.75rem; flex-wrap: wrap;">
+              <button id="vortex-lag-btn" class="btn-secondary" style="font-size: 0.78rem; padding: 0.45rem 0.9rem;">
+                <i class="fa-solid fa-gauge-high"></i> Accumulate Lag (Spin-down)
+              </button>
+              <button id="vortex-unpin-btn" class="btn-primary" style="font-size: 0.78rem; padding: 0.45rem 0.9rem;">
+                <i class="fa-solid fa-bolt-lightning"></i> Trigger Unpinning Avalanche (Glitch)
+              </button>
+            </div>
+
+            <div class="param-grid" style="margin-top: 0.85rem;">
+              <div class="param-box">
+                <div class="param-lbl">Superfluid Lag (δΩ)</div>
+                <div id="vortex-lag-readout" class="param-val text-orange">0.00 rad/s</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Critical Threshold</div>
+                <div class="param-val text-white">2.40 rad/s</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Quantized Circulation (κ)</div>
+                <div class="param-val text-cyan">h / 2m_n</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Angular Momentum Transfer</div>
+                <div class="param-val text-red">ΔJ = I_sf ΔΩ</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Explanation and Uploaded Diagram Reference -->
+          <div>
+            <p class="section-p">
+              In a rotating neutron star, the interior neutron superfluid carries angular momentum via an array of $\sim 10^{19}$ microscopic <strong class="text-cyan">quantized vortex lines</strong>:
+            </p>
+
+            <div class="formula-card cyan-border" style="margin: 0.5rem 0;">
+              <div class="formula-lbl">Quantized Circulation & Magnus Force</div>
+              <div class="katex-formula" data-formula="\oint \mathbf{v}_s \cdot d\mathbf{l} = \frac{h}{2m_n} \quad \bigg| \quad \mathbf{f}_M = \rho_s \boldsymbol{\kappa} \times (\mathbf{v}_L - \mathbf{v}_s)"></div>
+            </div>
+
+            <ul class="section-p" style="padding-left: 1.25rem; font-size: 0.9rem;">
+              <li>
+                <strong class="text-orange">Vortex Pinning:</strong> Vortex cores pass through nuclear pasta structures and lattice nuclei (as shown in Figure 5), where energy is minimized when pinned to nuclei ($F_{\text{pin}} \sim 10^{15}\text{ dyn/cm}$).
+              </li>
+              <li>
+                <strong class="text-white">Lag Buildup:</strong> As the crust continuously slows down due to magnetic dipole radiation ($\dot\Omega_{\text{crust}} < 0$), the pinned vortices cannot move outward. A rotational velocity lag $\delta\Omega = \Omega_{\text{sf}} - \Omega_{\text{crust}}$ builds up.
+              </li>
+              <li>
+                <strong class="text-red">Catastrophic Avalanche (The Glitch):</strong> When hydrodynamic Magnus force exceeds pinning strength ($F_M > F_{\text{pin}}$), an avalanche of billions of vortices unpins simultaneously, rushing outward and transferring angular momentum to the crust, producing the observed sudden spin-up jump $\Delta\Omega_0 / \Omega_0 \sim 10^{-6}$!
+              </li>
+            </ul>
+
+            <div class="img-frame" style="margin-top: 0.85rem;">
+              <img src="assets/images/vortex_pinning_diagram.jpg" alt="Neutron Superfluid Vortex Pinning in Lattice Nuclei and Magnetic Flux Tubes">
+              <div class="img-caption" style="font-size: 0.74rem;">
+                <strong class="text-orange">Figure 5:</strong> Vortex pinning in crystal lattice (Box B) and core magnetic flux tubes (Box C).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#cooling" class="btn-primary">
+            <i class="fa-solid fa-snowflake"></i> Next: Realtime Cooling Plot
+          </a>
+          <a href="#dark-heating" class="btn-secondary">
+            <i class="fa-solid fa-fire-flame-curved"></i> Dark Kinetic Heating
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 4: NEUTRON STAR COOLING & REALTIME PLOT (1 to 10^6 Years)
+         ========================================================================= -->
+    <section id="cooling" class="content-section" data-section="cooling">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Thermal Evolution & Neutrino Physics</span>
+        <h2 class="section-title">Neutron Star <span class="orange">Cooling Curves</span></h2>
+        <p class="section-subtitle">Realtime Thermal Evolution from 1 Year to 10⁶ Years with Observational Data</p>
+
+        <div class="grid-2col-wide">
+          <!-- Left: Realtime Cooling Simulation Chart & Time Scrubber -->
+          <div class="cooling-timeline-box">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+              <span style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--text-white);">
+                Realtime Cooling Plot (1 to 10⁶ Years)
+              </span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan);">Chandra / XMM-Newton</span>
+            </div>
+
+            <div class="chart-container-box">
+              <canvas id="cooling-chart"></canvas>
+            </div>
+
+            <!-- Time Scrubber Controls -->
+            <div class="timeline-scrubber-row">
+              <button id="cooling-play-btn" class="btn-primary" style="font-size: 0.76rem; padding: 0.4rem 0.85rem;">
+                <i class="fa-solid fa-play"></i> Play Evolution (1 → 10⁶ yr)
+              </button>
+              <input type="range" id="cooling-age-slider" class="timeline-slider" min="0" max="600" value="200" title="Scrub Stellar Age from 1 to 10^6 Years">
+            </div>
+
+            <!-- Live Telemetry Readouts for Selected Age -->
+            <div class="param-grid" style="margin-top: 0.85rem;">
+              <div class="param-box">
+                <div class="param-lbl">Stellar Age</div>
+                <div id="cooling-readout-age" class="param-val text-orange">100 Years</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Surface Temperature (Ts)</div>
+                <div id="cooling-readout-temp" class="param-val text-white">2,500,000 K</div>
+              </div>
+              <div class="param-box" style="grid-column: span 2;">
+                <div class="param-lbl">Active Cooling Regime</div>
+                <div id="cooling-readout-regime" class="param-val text-cyan">Neutrino Cooling Era (Modified Urca)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Detailed Explanations of Cooling Processes -->
+          <div>
+            <p class="section-p">
+              Born with an initial temperature of <strong class="text-red">$T \sim 10^{11}\text{ K}$</strong> ($10\text{ MeV}$), a neutron star undergoes distinct thermal epochs:
+            </p>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-cyan">1. Core-Crust Thermal Relaxation ($t < 100\text{ yr}$)</span>
+                <span class="process-speed slow">Thermal Wave</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                The core cools rapidly via neutrinos while the crust stays hot. A cooling wave travels from the core to the surface over $10 - 100\text{ years}$, plunging surface temperature down to $\sim 10^6\text{ K}$.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-orange">2. Neutrino Cooling Era ($100\text{ yr} < t < 10^5\text{ yr}$)</span>
+                <span class="process-speed fast">Modified Urca & PBF</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Neutrinos escape freely from the interior. Standard stars cool via <strong class="text-cyan">Modified Urca</strong> ($n+n \to n+p+e^-+\bar\nu_e$). Massive stars exceeding Direct Urca threshold plunge $10^6 \times$ faster!
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-white">3. Photon Cooling Era ($t > 10^5\text{ yr}$)</span>
+                <span class="process-speed slow">Surface Blackbody</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Neutrino emissivity fades as $T^8$; thermal photon radiation from the surface ($L_\gamma = 4\pi R^2 \sigma_{\text{SB}} T_s^4$) becomes the dominant cooling channel ($T_s \propto t^{-1/2}$).
+              </p>
+            </div>
+
+            <div class="formula-card red-border" style="margin-top: 0.75rem;">
+              <div class="formula-lbl">Direct Urca Momentum Triangle Condition</div>
+              <div class="katex-formula" data-formula="p_{F,n} \le p_{F,p} + p_{F,e} \implies x_p \ge 11.1\% - 14.8\%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#dark-heating" class="btn-primary">
+            <i class="fa-solid fa-fire-flame-curved"></i> Next: Dark Kinetic Heating
+          </a>
+          <a href="#research" class="btn-secondary">
+            <i class="fa-solid fa-code"></i> Research Software & Data
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 5: DARK KINETIC HEATING (Dedicated Page Requested!)
+         ========================================================================= -->
+    <section id="dark-heating" class="content-section" data-section="dark-heating">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Astroparticle Physics & Dark Matter Probes</span>
+        <h2 class="section-title">Dark <span class="orange">Kinetic Heating</span> of Neutron Stars</h2>
+        <p class="section-subtitle">How gravitational capture of ambient galactic dark matter sets a cosmic surface temperature floor</p>
+
+        <div class="grid-2col-wide">
+          <div>
+            <p class="section-p">
+              In standard stellar evolution theory, isolated neutron stars older than a few billion years should cool down to negligible temperatures ($T_s \ll 100\text{ K}$), rendering them completely dark and undetectable in optical and infrared bands.
+            </p>
+
+            <p class="section-p">
+              However, as old neutron stars traverse the galactic dark matter halo ($\rho_\chi \approx 0.4\text{ GeV/cm}^3$), their immense gravitational potential ($C = GM/Rc^2 \approx 0.2$) captures ambient dark matter particles ($\chi$), creating a continuous thermal heating mechanism known as <strong class="text-orange">Dark Kinetic Heating</strong>.
+            </p>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-orange">1. Relativistic Infall Acceleration</span>
+                <span class="process-speed fast">v_esc ~ 0.6 – 0.7 c</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Due to extreme gravitational pull, dark matter particles fall from galactic speeds ($v \sim 220\text{ km/s}$) and accelerate to relativistic escape velocity:
+                $$\gamma_{\text{esc}} = (1 - 2C)^{-1/2} \approx 1.35 - 1.5$$
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-red">2. Nuclear Collision & Kinetic Transfer</span>
+                <span class="process-speed fast">ΔE = (γ - 1) m_χ c²</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Upon entering the ultra-dense stellar core, dark matter particles scatter elastically against degenerate neutrons, depositing their immense relativistic kinetic energy into the core, heating the star from within.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-cyan">3. The Infrared Heating Floor</span>
+                <span class="process-speed transient">T_floor ~ 1,500 – 2,500 K</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Kinetic heating balances surface thermal radiation, establishing a universal <strong class="text-orange">heating floor of $1500 - 2500\text{ K}$</strong> that persists indefinitely, preventing the star from ever freezing!
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Mathematical Formulas & Observation with JWST -->
+          <div>
+            <div class="formula-card">
+              <div class="formula-lbl">Dark Kinetic Heating Luminosity</div>
+              <div class="katex-formula" data-formula="L_{\text{kin}} = (\gamma - 1) \dot{M}_\chi c^2 \approx \pi R^2 \rho_\chi v_{\text{rel}} \left(\frac{2GM}{Rc^2}\right) \left[1 + \frac{2GM}{R v_{\text{rel}}^2}\right]"></div>
+            </div>
+
+            <div class="formula-card red-border">
+              <div class="formula-lbl">Asymptotic Surface Temperature Floor</div>
+              <div class="katex-formula" data-formula="T_{\text{kin}}^{\infty} = \left(\frac{L_{\text{kin}}}{4\pi R^2 \sigma_{\text{SB}}}\right)^{1/4} (1 - 2C)^{1/4} \approx 1500 - 2500 \text{ K}"></div>
+            </div>
+
+            <div class="param-grid" style="margin-top: 1rem;">
+              <div class="param-box">
+                <div class="param-lbl">Local DM Density</div>
+                <div class="param-val text-white">0.4 GeV/cm³</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Infall Speed</div>
+                <div class="param-val text-orange">~ 0.65 c</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Heating Floor</div>
+                <div class="param-val text-red">~ 1,800 K</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Peak Wavelength</div>
+                <div class="param-val text-cyan">~ 1.5 – 3.0 μm (IR)</div>
+              </div>
+            </div>
+
+            <div class="img-frame" style="margin-top: 1rem;">
+              <div class="img-caption" style="padding: 1.1rem; line-height: 1.6; font-size: 0.82rem;">
+                <strong class="text-orange">🔭 Probing Dark Matter with JWST & 30-Meter Telescopes:</strong><br>
+                Because neutron stars have immense nuclear densities, they capture dark matter with extreme geometric cross-sections ($\sigma_{\chi n} \sim 10^{-45}\text{ cm}^2$).
+                Searching for old, warm, isolated neutron stars in infrared bands with the <em>James Webb Space Telescope (JWST)</em> and future 30-meter telescopes (ELT, TMT) tests dark matter models across mass regimes (from sub-GeV light dark matter to multi-TeV WIMPs) far beyond the sensitivity reach of terrestrial underground laboratories!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#research" class="btn-primary">
+            <i class="fa-solid fa-code"></i> Next: Softwares & Data Archives
+          </a>
+          <a href="#overview" class="btn-secondary">
+            <i class="fa-solid fa-arrow-up"></i> Return to Top
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 6: RESEARCH SOFTWARES & DATA WEBSITES
+         ========================================================================= -->
+    <section id="research" class="content-section" data-section="research">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Astrophysical Toolkit & Databases</span>
+        <h2 class="section-title">Research <span class="orange">Softwares & Data</span></h2>
+        <p class="section-subtitle">Premier numerical relativity packages, equation-of-state databases, and observational data repositories</p>
+
+        <div class="software-grid">
+          
+          <!-- Tool 1: CompOSE -->
+          <div class="software-card">
+            <div class="sw-category">Equation of State Database</div>
+            <div class="sw-name text-orange">CompOSE</div>
+            <p class="sw-desc">
+              CompStar Online Supernovae Equations of State. The definitive online service providing thermodynamic tables for neutron stars, proto-neutron stars, and core-collapse supernovae across a wide grid of density, temperature, and proton fractions.
+            </p>
+            <a href="https://compose.obspm.fr/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> compose.obspm.fr
+            </a>
+          </div>
+
+          <!-- Tool 2: LORENE -->
+          <div class="software-card">
+            <div class="sw-category">Numerical Relativity Library</div>
+            <div class="sw-name text-cyan">LORENE</div>
+            <p class="sw-desc">
+              Langage Objet pour la RElativité Numérique. A high-precision C++ object-oriented library based on multi-domain spectral methods. Used worldwide to construct 3D configurations of rapidly rotating relativistic stars and binary neutron star mergers.
+            </p>
+            <a href="https://lorene.obspm.fr/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> lorene.obspm.fr
+            </a>
+          </div>
+
+          <!-- Tool 3: NSCool -->
+          <div class="software-card">
+            <div class="sw-category">Thermal Evolution Solver</div>
+            <div class="sw-name text-red">NSCool</div>
+            <p class="sw-desc">
+              Dany Page's comprehensive 1D general-relativistic neutron star cooling code. Solves the coupled equations of energy transport and neutrino emissivity, incorporating superfluid pairing gaps, magnetic field evolution, and crust heating.
+            </p>
+            <a href="http://www.astroscu.unam.mx/neutrons/NSCool/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> astroscu.unam.mx/neutrons/NSCool
+            </a>
+          </div>
+
+          <!-- Tool 4: RNS -->
+          <div class="software-card">
+            <div class="sw-category">Rapidly Rotating Stars</div>
+            <div class="sw-name text-white">RNS Code</div>
+            <p class="sw-desc">
+              Developed by Nikolaos Stergioulas. Computes models of rapidly rotating, relativistic neutron stars with realistic equations of state using the Komatsu-Eriguchi-Hachisu (KEH) numerical scheme. Calculates maximum mass, Keplerian spin limits, and moment of inertia.
+            </p>
+            <a href="http://www.gravity.phys.uwm.edu/rns/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> gravity.phys.uwm.edu/rns
+            </a>
+          </div>
+
+          <!-- Tool 5: TEMPO2 & PINT -->
+          <div class="software-card">
+            <div class="sw-category">Pulsar Timing Analysis</div>
+            <div class="sw-name text-cyan">TEMPO2 & PINT</div>
+            <p class="sw-desc">
+              High-precision pulsar timing software packages capable of nanosecond timing residuals. Used by international pulsar timing arrays (NANOGrav, EPTA, PPTA) for detecting nanohertz gravitational waves and probing nuclear equations of state via Shapiro delays.
+            </p>
+            <a href="https://bitbucket.org/psrsoft/tempo2/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> bitbucket.org/psrsoft/tempo2
+            </a>
+          </div>
+
+          <!-- Tool 6: ATNF Pulsar Catalogue -->
+          <div class="software-card">
+            <div class="sw-category">Observational Database</div>
+            <div class="sw-name text-orange">ATNF Pulsar Catalogue</div>
+            <p class="sw-desc">
+              The Australia Telescope National Facility (ATNF) catalogue containing published parameters for over 3,300 known rotation-powered pulsars, millisecond pulsars, magnetars, and binary systems with live query filters.
+            </p>
+            <a href="https://www.atnf.csiro.au/research/pulsar/psrcat/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> atnf.csiro.au/research/pulsar/psrcat
+            </a>
+          </div>
+
+          <!-- Tool 7: NICER Data Archive -->
+          <div class="software-card">
+            <div class="sw-category">NASA High Energy Archive</div>
+            <div class="sw-name text-white">NASA NICER / HEASARC</div>
+            <p class="sw-desc">
+              NASA's Neutron star Interior Composition Explorer (NICER) mission data on the International Space Station. Delivers pulse-profile modeling to simultaneously constrain mass and radius ($M$ and $R$) to within $5\%$.
+            </p>
+            <a href="https://heasarc.gsfc.nasa.gov/docs/nicer/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> heasarc.gsfc.nasa.gov/docs/nicer
+            </a>
+          </div>
+
+          <!-- Tool 8: GWOSC -->
+          <div class="software-card">
+            <div class="sw-category">Gravitational Waves</div>
+            <div class="sw-name text-red">GWOSC (LIGO / Virgo / KAGRA)</div>
+            <p class="sw-desc">
+              Gravitational Wave Open Science Center. Open-access strain data, tutorials, and parameter estimation posteriors for binary neutron star mergers (such as GW170817 and GW190425) and neutron star-black hole coalescences.
+            </p>
+            <a href="https://gw-openscience.org/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> gw-openscience.org
+            </a>
+          </div>
+
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#overview" class="btn-primary">
+            <i class="fa-solid fa-arrow-up"></i> Return to Top
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER & ATTRIBUTION (As explicitly requested by User) -->
+  <footer class="site-footer">
+    <div class="footer-quote">
+      "Neutron stars connect the physics of the smallest subatomic scales with the largest astronomical scales. Their interiors contain matter under extreme density, temperature, magnetic field, and gravitational conditions. By studying their structure, composition, cooling, rotation, glitches, and gravitational waves, we can probe the fundamental properties of dense matter."
+    </div>
+    <div class="footer-designer">
+      designed by <span>Yogeesh N</span>
+    </div>
+    <div>
+      <a href="mailto:yoguyamu@gmail.com" class="footer-email">yoguyamu@gmail.com</a>
+    </div>
+  </footer>
+
+  <!-- EXTERNAL LIBRARIES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="js/audio.js"></script>
+  <script src="js/star3d.js"></script>
+  <script src="js/vortex-animation.js"></script>
+  <script src="js/simulations.js"></script>
+  <script src="js/scrollytelling.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

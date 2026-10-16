@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neutron Star Group IIT Jodhpur — Dense-Matter Astrophysics & Structure</title>
+  
+  <!-- Primary Meta Tags / SEO -->
+  <meta name="title" content="Neutron Star Group IIT Jodhpur — Dense-Matter Astrophysics & Structure">
+  <meta name="description" content="Official website of the Neutron Star Group at the Department of Physics, Indian Institute of Technology (IIT) Jodhpur. Research on dense-matter equations of state, pulsar glitches, nuclear pasta, relativistic cooling, and compact stars led by Dr. Monika Sinha.">
+  <meta name="keywords" content="Neutron Star Group IIT Jodhpur, IIT Jodhpur Physics, Monika Sinha, Neutron Star, Nuclear Pasta, Pulsar Glitches, Equation of State, Dense Matter, Relativistic Cooling, Dark Kinetic Heating, Vivek Baruah Thapa, Anil Kumar, Vishal Parmar, Yogeesh N, Athira S, Samyak Jain">
+  <meta name="author" content="Neutron Star Group, IIT Jodhpur">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Neutron Star Group IIT Jodhpur">
+  <meta property="og:title" content="Neutron Star Group IIT Jodhpur — Dense-Matter Astrophysics & Structure">
+  <meta property="og:description" content="Research on dense-matter equations of state, pulsar glitches, nuclear pasta, relativistic cooling, and compact stars at IIT Jodhpur.">
+  <meta property="og:image" content="Neutron_star.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Neutron Star Group IIT Jodhpur — Dense-Matter Astrophysics & Structure">
+  <meta property="twitter:description" content="Research on dense-matter equations of state, pulsar glitches, nuclear pasta, relativistic cooling, and compact stars at IIT Jodhpur.">
+  <meta property="twitter:image" content="Neutron_star.webp">
+
+  <!-- Favicon (Pulsar core SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23ff7a00'/><circle cx='50' cy='50' r='20' fill='%23ef4444'/><circle cx='50' cy='50' r='8' fill='%23ffffff'/></svg>">
+
+  <!-- Schema.org Structured Data (Google Rich Results for Research Group) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "Neutron Star Group IIT Jodhpur",
+    "alternateName": ["IIT Jodhpur Dense Matter Astrophysics Group", "Monika Sinha Research Group IIT Jodhpur"],
+    "description": "Dense-matter astrophysics and compact star research group at the Department of Physics, Indian Institute of Technology Jodhpur, studying equations of state, pulsar glitches, nuclear pasta, and relativistic cooling.",
+    "parentOrganization": {
+      "@type": "EducationalOrganization",
+      "name": "Indian Institute of Technology Jodhpur",
+      "url": "https://www.iitj.ac.in",
+      "department": {
+        "@type": "Department",
+        "name": "Department of Physics"
+      }
+    },
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Dr. Monika Sinha",
+        "jobTitle": "Associate Professor & Group Lead",
+        "affiliation": "Indian Institute of Technology Jodhpur"
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Vivek Baruah Thapa",
+        "jobTitle": "Postdoctoral Researcher",
+        "affiliation": "Indian Institute of Technology Jodhpur"
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Anil Kumar",
+        "jobTitle": "Former PhD Scholar",
+        "affiliation": "University of Wrocław"
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Vishal Parmar",
+        "jobTitle": "Former PhD Scholar",
+        "affiliation": "INFN Pisa"
+      },
+      {
+        "@type": "Person",
+        "name": "Yogeesh N",
+        "jobTitle": "Research Scholar",
+        "affiliation": "Indian Institute of Technology Jodhpur"
+      },
+      {
+        "@type": "Person",
+        "name": "Athira S",
+        "jobTitle": "Research Scholar",
+        "affiliation": "Indian Institute of Technology Jodhpur"
+      },
+      {
+        "@type": "Person",
+        "name": "Samyak Jain",
+        "jobTitle": "Research Scholar",
+        "affiliation": "Indian Institute of Technology Jodhpur"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Scientific Typography: Space Grotesk + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- KaTeX CSS for High-Precision Mathematical Typesetting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- FIXED 3D CANVAS BACKGROUND -->
+  <div id="webgl-container"></div>
+
+  <!-- FIXED TOP NAVIGATION HEADER -->
+  <header class="site-header">
+    <div class="brand-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+      <div class="pulsar-core-icon"></div>
+      <div class="brand-name">Neutron Star Group <span>IIT Jodhpur</span></div>
+    </div>
+
+    <nav class="header-nav">
+      <a href="#overview" class="nav-link active">Overview</a>
+      <a href="#formation" class="nav-link">Formation</a>
+      <a href="#structure" class="nav-link">Structure</a>
+      <a href="#vortex" class="nav-link">Glitches & Pasta</a>
+      <a href="#cooling" class="nav-link">Cooling Curves</a>
+      <a href="#dark-heating" class="nav-link">Dark Kinetic Heating</a>
+      <a href="#research" class="nav-link">Softwares & Data</a>
+      <a href="#group" class="nav-link">Our Group</a>
+      <a href="#outreach" class="nav-link">Outreach &amp; Conferences</a>
+    </nav>
+
+    <div class="header-controls">
+      <button id="audio-toggle-btn" class="icon-btn" title="Toggle Synthesized Cosmic Drone & Pulsar Audio (M)">
+        <i class="fa-solid fa-volume-xmark"></i>
+      </button>
+      <button id="fullscreen-toggle-btn" class="icon-btn" title="Toggle Fullscreen">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- FLOATING BOTTOM 3D CONTROLS DOCK -->
+  <div class="viewport-dock">
+    <div class="dock-item">
+      <span class="dock-label"><i class="fa-solid fa-scissors"></i> Cutaway:</span>
+      <input type="range" id="dock-cutaway-slider" class="dock-slider" min="0" max="180" value="90" title="Adjust Cutaway Wedge Angle (C)">
+    </div>
+
+    <button id="dock-bfield-btn" class="dock-btn active" title="Toggle Magnetic Sheath Loops (B)">
+      <i class="fa-solid fa-magnet"></i> B-Field Loops
+    </button>
+
+    <button id="dock-spin-btn" class="dock-btn active" title="Pause or Resume Stellar Rotation (Space)">
+      <i class="fa-solid fa-pause"></i> Pause
+    </button>
+
+    <button id="dock-reset-btn" class="dock-btn" title="Reset Camera View">
+      <i class="fa-solid fa-rotate-left"></i> Reset
+    </button>
+  </div>
+
+  <!-- MAIN SCROLLABLE PAGES (Wide Minimalistic Cards) -->
+  <main class="page-container">
+
+    <!-- =========================================================================
+         PAGE 0: OVERVIEW
+         ========================================================================= -->
+    <section id="overview" class="content-section align-left" data-section="overview">
+      <div class="minimal-card" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Department of Physics, IIT Jodhpur</span>
+        <h1 class="section-title">Neutron Star Group <span class="orange">IIT Jodhpur</span></h1>
+        <p class="section-subtitle">Dense-Matter Astrophysics, Nuclear Equations of State & Relativistic Compact Objects</p>
+
+        <p class="section-p">
+          A <strong class="text-orange">neutron star</strong> is an extraordinarily compact stellar remnant formed during the core-collapse supernova of a massive star ($M_{\text{ZAMS}} \approx 8 - 25 M_\odot$).
+          It compresses roughly <strong class="text-white">1.4 to 2.1 solar masses</strong> into a sphere only <strong class="text-orange">10 to 12 kilometers</strong> in radius.
+        </p>
+
+        <p class="section-p">
+          Its interior reaches densities comparable to and above nuclear saturation density ($\rho_0 \approx 2.8 \times 10^{14}\text{ g/cm}^3$), making neutron stars unique cosmic laboratories connecting subatomic nuclear physics with Einstein's general relativity.
+        </p>
+
+        <div class="param-grid">
+          <div class="param-box">
+            <div class="param-lbl">Typical Mass</div>
+            <div class="param-val text-orange">~ 1.4 – 2.1 M☉</div>
+          </div>
+          <div class="param-box">
+            <div class="param-lbl">Stellar Radius</div>
+            <div class="param-val text-white">10 – 12 km</div>
+          </div>
+          <div class="param-box">
+            <div class="param-lbl">Central Density</div>
+            <div class="param-val text-red">> 2 – 8 n_sat</div>
+          </div>
+          <div class="param-box">
+            <div class="param-lbl">Escape Speed</div>
+            <div class="param-val text-cyan">~ 0.6 c</div>
+          </div>
+        </div>
+
+        <div class="formula-card">
+          <div class="formula-lbl">Relativistic Compactness Formula</div>
+          <div class="katex-formula" data-formula="C = \frac{GM}{R c^2} \approx 0.15 - 0.25"></div>
+        </div>
+
+        <div class="btn-group">
+          <a href="#formation" class="btn-primary">
+            <i class="fa-solid fa-arrow-down"></i> Formation of Neutron Star
+          </a>
+          <a href="#structure" class="btn-secondary">
+            <i class="fa-solid fa-layer-group"></i> Star Structure
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 1: FORMATION OF THE NEUTRON STAR (With Black Hole Background!)
+         ========================================================================= -->
+    <section id="formation" class="content-section" data-section="formation">
+      <div class="minimal-card wide black-hole-bg-page" style="--card-accent: var(--color-red);">
+        <span class="section-tag red">Stellar Evolution & Collapse</span>
+        <h2 class="section-title">Formation of a <span class="red">Neutron Star</span></h2>
+        <p class="section-subtitle">From Massive Progenitor Star to Core Collapse Supernova & Black Hole Boundary</p>
+
+        <div class="grid-2col-wide">
+          <div>
+            <p class="section-p">
+              The birth of a neutron star represents one of the most violent and energetic events in the universe:
+            </p>
+
+            <ul class="section-p" style="padding-left: 1.25rem;">
+              <li>
+                <strong class="text-orange">1. Massive Star Life Cycle:</strong> Stars with initial masses between $8$ and $25 M_\odot$ fuse hydrogen into helium, then proceed through carbon, neon, oxygen, and silicon burning stages, forming an onion-like shell structure with an inert iron core.
+              </li>
+              <li>
+                <strong class="text-red">2. The Iron Catastrophe:</strong> Iron-group nuclei ($^{56}\text{Fe}$) have the highest nuclear binding energy per nucleon. Further fusion is endothermic and cannot support the star against gravity.
+              </li>
+              <li>
+                <strong class="text-orange">3. Gravitational Core Collapse:</strong> Once the iron core surpasses the <em>Chandrasekhar mass limit</em> ($M_{\text{Ch}} \approx 1.4 M_\odot$), electron degeneracy pressure fails. The core plummets inward at $23\%\text{ of light speed}$ in under a second!
+              </li>
+              <li>
+                <strong class="text-cyan">4. Photodisintegration & Neutronization:</strong> Gamma rays shatter iron nuclei, and energetic electrons are forced into protons via electron capture:
+                <div class="formula-card red-border" style="margin: 0.6rem 0;">
+                  <div class="formula-lbl">Neutronization Reaction & Neutrino Burst</div>
+                  <div class="katex-formula" data-formula="e^- + p \longrightarrow n + \nu_e \quad (\sim 10^{53} \text{ ergs in neutrinos})"></div>
+                </div>
+              </li>
+              <li>
+                <strong class="text-white">5. Core Bounce Supernova:</strong> When central density reaches nuclear saturation ($\rho_0 \approx 2.8 \times 10^{14}\text{ g/cm}^3$), repulsive strong nuclear forces halt collapse. The core rebounds, driving a shockwave that expels outer stellar layers as a Type II supernova.
+              </li>
+            </ul>
+
+            <div class="param-grid" style="margin-top: 1rem;">
+              <div class="param-box">
+                <div class="param-lbl">Progenitor Mass</div>
+                <div class="param-val text-orange">8 – 25 M☉</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Remnant Mass</div>
+                <div class="param-val text-white">1.4 – 2.1 M☉</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Neutrino Energy</div>
+                <div class="param-val text-red">~ 10⁵³ ergs</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Birth Core Temp</div>
+                <div class="param-val text-cyan">~ 10¹¹ K</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stellar Life Cycle & Black Hole Images -->
+          <div>
+            <div class="img-frame">
+              <img src="assets/images/stellar_lifecycle.jpg" alt="Life Cycle of a Star: Massive Star to Supernova, Neutron Star, and Black Hole">
+              <div class="img-caption">
+                <strong class="text-orange">Figure 1:</strong> Stellar evolution branch comparing average stars (yielding White Dwarfs) vs. massive stars (yielding Neutron Stars or Black Holes).
+              </div>
+            </div>
+
+            <div class="img-frame" style="margin-top: 1rem;">
+              <img src="assets/images/black_hole_anatomy.png" alt="Black Hole Anatomy and Accretion Disc">
+              <div class="img-caption" style="font-size: 0.74rem;">
+                <strong class="text-red">Figure 2: Black Hole Boundary.</strong> When core mass exceeds the maximum Tolman-Oppenheimer-Volkoff limit ($M_{\text{core}} > 2.2 - 2.5 M_\odot$), collapse continues indefinitely to form an event horizon and gravitational singularity.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#structure" class="btn-primary">
+            <i class="fa-solid fa-arrow-down"></i> Next: Structure of the Star
+          </a>
+          <a href="#vortex" class="btn-secondary">
+            <i class="fa-solid fa-tornado"></i> Superfluid Vortex Dynamics
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 2: STRUCTURE OF THE STAR (All Information in One Page)
+         ========================================================================= -->
+    <section id="structure" class="content-section" data-section="structure">
+      <div class="minimal-card wide" style="--card-accent: var(--color-cyan);">
+        <span class="section-tag">Anatomy & Radial Stratification</span>
+        <h2 class="section-title">Structure of the <span class="orange">Neutron Star</span></h2>
+        <p class="section-subtitle">Concentric layers from the thin optical atmosphere down to the exotic quantum core (Picture 2 MUSES Model)</p>
+
+        <div class="grid-2col-wide">
+          <!-- Left: Comprehensive Layer Breakdown Matching Picture 2 -->
+          <div class="structure-layer-list">
+            
+            <!-- Layer 1: Atmosphere -->
+            <div class="layer-item-card" style="--layer-color: #38bdf8;">
+              <div class="layer-item-header">
+                <span class="layer-item-title text-cyan">1. ATMOSPHERE</span>
+                <span class="layer-item-specs">Rw = 10⁻⁴ km (~10 cm) | nB &lt; 10⁻⁷ nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Mostly H, He, C.</strong> Thin optical skin determining the emergent thermal X-ray radiation. Intense surface gravity ($10^{14}\text{ cm/s}^2$) rapidly sediments heavy elements. Strong magnetic fields ($10^{12} - 10^{15}\text{ G}$) distort electron orbitals into needle-like cylinders.
+              </div>
+            </div>
+
+            <!-- Layer 2: Outer Crust -->
+            <div class="layer-item-card" style="--layer-color: #60a5fa;">
+              <div class="layer-item-header">
+                <span class="layer-item-title" style="color: #60a5fa;">2. OUTER CRUST</span>
+                <span class="layer-item-specs">Rw = 0.1 km (100 m) | nB &lt; 10⁻³ nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Heavier nuclei, free e⁻.</strong> Ionized nuclei arranged into a solid body-centered cubic (BCC) Coulomb crystal lattice embedded in a degenerate relativistic electron gas. Electron capture drives nuclei from $^{56}\text{Fe}$ to $^{118}\text{Kr}$ until the <em>neutron drip threshold</em> ($\rho_{\text{drip}} \approx 4.3 \times 10^{11}\text{ g/cm}^3$) is reached.
+              </div>
+            </div>
+
+            <!-- Layer 3: Inner Crust & Nuclear Pasta -->
+            <div class="layer-item-card" style="--layer-color: #f59e0b;">
+              <div class="layer-item-header">
+                <span class="layer-item-title text-orange">3. INNER CRUST</span>
+                <span class="layer-item-specs">Rw = 0.5 km (500 m) | nB &lt; 0.5 nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Free neutrons and e⁻, atomic nuclei.</strong> Lattice permeated by unbound neutron superfluid. Near the crust-core boundary, competition between Coulomb repulsion and strong nuclear surface tension produces frustrated <strong class="text-orange">Nuclear Pasta</strong> topologies:
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #fde047; margin-top: 0.35rem;">
+                  🍡 Gnocchi (droplets) → 🥢 Spaghetti (rods) → 🥞 Lasagna (slabs) → 🥖 Penne (tubes) → 🧀 Swiss Cheese (bubbles)
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 4: Outer Core -->
+            <div class="layer-item-card" style="--layer-color: #0284c7;">
+              <div class="layer-item-header">
+                <span class="layer-item-title" style="color: #38bdf8;">4. OUTER CORE</span>
+                <span class="layer-item-specs">Rw ~ 7 km (bulk volume) | nB &lt; 2 nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Neutron rich nuclear matter.</strong> Uniform nucleonic Fermi liquid ($n \sim 90-95\%$, $p \sim 5\%$, relativistic $e^-$ and $\mu^-$) in beta equilibrium ($\mu_n = \mu_p + \mu_e$). Neutrons form $^3P_2$ triplet superfluid while protons form $^1S_0$ singlet Type-II superconductor, threaded by $\sim 10^{19}$ quantized vortex lines.
+              </div>
+            </div>
+
+            <!-- Layer 5: Inner Core -->
+            <div class="layer-item-card" style="--layer-color: #ef4444;">
+              <div class="layer-item-header">
+                <span class="layer-item-title text-red">5. INNER CORE</span>
+                <span class="layer-item-specs">Rw ~ 5 km (Center) | nB &lt; 10 nsat</span>
+              </div>
+              <div class="layer-item-desc">
+                <strong class="text-white">Nucleons, Hyperons, Meson Condensates, Deltas, Deconfined Quarks?</strong> Pressures exceed $10^{35}\text{ dyn/cm}^2$. Hadron boundaries melt into free $u, d, s$ quarks in a Color-Flavor Locked (CFL) state, hyperons ($\Lambda, \Sigma, \Xi$), or pion/kaon condensates.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Picture 2 MUSES Diagram & Pulsar Populations -->
+          <div>
+            <div class="img-frame">
+              <img src="assets/images/neutron_star_structure.png" alt="Neutron Star Anatomy: MUSES Cutaway Model showing Atmosphere, Outer Crust, Inner Crust, Outer Core, Inner Core">
+              <div class="img-caption">
+                <strong class="text-cyan">Figure 3:</strong> MUSES structural cross-section of a neutron star with radial widths ($R_W$) and typical baryon densities ($n_B$) normalized to nuclear saturation density ($n_{\text{sat}} \approx 0.16\text{ fm}^{-3}$).
+              </div>
+            </div>
+
+            <div class="img-frame" style="margin-top: 1rem;">
+              <img src="assets/images/pulsar_types_quad.jpg" alt="Four Types of Neutron Stars: Magnetar, X-ray Pulsar, Radio Pulsar, Radio-Quiet">
+              <div class="img-caption" style="font-size: 0.74rem;">
+                <strong class="text-orange">Figure 4: Populations.</strong> Observed classes: Magnetars ($B \sim 10^{15}\text{ G}$), X-ray pulsars, Radio pulsars, and Radio-quiet neutron stars.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#vortex" class="btn-primary">
+            <i class="fa-solid fa-tornado"></i> Next: Vortex Pinning Animation
+          </a>
+          <a href="#cooling" class="btn-secondary">
+            <i class="fa-solid fa-snowflake"></i> Cooling Curves
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 3: SUPERFLUID VORTEX PINNING & GLITCH DYNAMICS (Animation Requested)
+         ========================================================================= -->
+    <section id="vortex" class="content-section" data-section="vortex">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Superfluid Dynamics & Angular Momentum Transfer</span>
+        <h2 class="section-title">Vortex Pinning in <span class="orange">Nuclear Pasta</span> & Glitches</h2>
+        <p class="section-subtitle">How quantized neutron vortices trapped in the inner crust trigger macroscopic pulsar glitches</p>
+
+        <div class="grid-2col-wide">
+          <!-- Left: Interactive Canvas Animation -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+              <span id="vortex-status-badge" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #10b981;">
+                STATUS: Pinned Equilibrium
+              </span>
+              <span id="vortex-jump-readout" class="text-red" style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600;">
+                ΔΩ/Ω = +0.00 × 10⁻⁶
+              </span>
+            </div>
+
+            <!-- Vortex Animation Canvas -->
+            <canvas id="vortex-canvas"></canvas>
+
+            <!-- Controls -->
+            <div style="display: flex; gap: 0.6rem; margin-top: 0.75rem; flex-wrap: wrap;">
+              <button id="vortex-lag-btn" class="btn-secondary" style="font-size: 0.78rem; padding: 0.45rem 0.9rem;">
+                <i class="fa-solid fa-gauge-high"></i> Accumulate Lag (Spin-down)
+              </button>
+              <button id="vortex-unpin-btn" class="btn-primary" style="font-size: 0.78rem; padding: 0.45rem 0.9rem;">
+                <i class="fa-solid fa-bolt-lightning"></i> Trigger Unpinning Avalanche (Glitch)
+              </button>
+            </div>
+
+            <div class="param-grid" style="margin-top: 0.85rem;">
+              <div class="param-box">
+                <div class="param-lbl">Superfluid Lag (δΩ)</div>
+                <div id="vortex-lag-readout" class="param-val text-orange">0.00 rad/s</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Critical Threshold</div>
+                <div class="param-val text-white">2.40 rad/s</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Quantized Circulation (κ)</div>
+                <div class="param-val text-cyan">h / 2m_n</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Angular Momentum Transfer</div>
+                <div class="param-val text-red">ΔJ = I_sf ΔΩ</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Explanation and Uploaded Diagram Reference -->
+          <div>
+            <p class="section-p">
+              In a rotating neutron star, the interior neutron superfluid carries angular momentum via an array of $\sim 10^{19}$ microscopic <strong class="text-cyan">quantized vortex lines</strong>:
+            </p>
+
+            <div class="formula-card cyan-border" style="margin: 0.5rem 0;">
+              <div class="formula-lbl">Quantized Circulation & Magnus Force</div>
+              <div class="katex-formula" data-formula="\oint \mathbf{v}_s \cdot d\mathbf{l} = \frac{h}{2m_n} \quad \bigg| \quad \mathbf{f}_M = \rho_s \boldsymbol{\kappa} \times (\mathbf{v}_L - \mathbf{v}_s)"></div>
+            </div>
+
+            <ul class="section-p" style="padding-left: 1.25rem; font-size: 0.9rem;">
+              <li>
+                <strong class="text-orange">Vortex Pinning:</strong> Vortex cores pass through nuclear pasta structures and lattice nuclei (as shown in Figure 5), where energy is minimized when pinned to nuclei ($F_{\text{pin}} \sim 10^{15}\text{ dyn/cm}$).
+              </li>
+              <li>
+                <strong class="text-white">Lag Buildup:</strong> As the crust continuously slows down due to magnetic dipole radiation ($\dot\Omega_{\text{crust}} < 0$), the pinned vortices cannot move outward. A rotational velocity lag $\delta\Omega = \Omega_{\text{sf}} - \Omega_{\text{crust}}$ builds up.
+              </li>
+              <li>
+                <strong class="text-red">Catastrophic Avalanche (The Glitch):</strong> When hydrodynamic Magnus force exceeds pinning strength ($F_M > F_{\text{pin}}$), an avalanche of billions of vortices unpins simultaneously, rushing outward and transferring angular momentum to the crust, producing the observed sudden spin-up jump $\Delta\Omega_0 / \Omega_0 \sim 10^{-6}$!
+              </li>
+            </ul>
+
+            <div class="img-frame" style="margin-top: 0.85rem;">
+              <img src="assets/images/vortex_pinning_diagram.jpg" alt="Neutron Superfluid Vortex Pinning in Lattice Nuclei and Magnetic Flux Tubes">
+              <div class="img-caption" style="font-size: 0.74rem;">
+                <strong class="text-orange">Figure 5:</strong> Vortex pinning in crystal lattice (Box B) and core magnetic flux tubes (Box C).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE NUCLEAR PASTA TOPOLOGY & PINNING SHOWCASE -->
+        <div class="pasta-explorer-container">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <span class="section-tag" style="background: rgba(255, 122, 0, 0.15); color: var(--color-orange);">Inner Crust Topologies</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--text-white); margin-top: 0.25rem;">
+                Nuclear Pasta Structures & Superfluid Vortex Pinning
+              </h3>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--color-cyan);">
+              0.05 n₀ &lt; n_B &lt; 0.5 n₀ (Crust-Core Transition)
+            </span>
+          </div>
+
+          <p class="section-p" style="margin-top: 0.5rem; font-size: 0.88rem;">
+            At the base of the inner crust, competition between repulsive Coulomb energy and attractive nuclear surface tension frustrates normal spherical nuclei into exotic topological phases known as <strong class="text-orange">Nuclear Pasta</strong>. The geometry dramatically governs how quantized neutron vortices pin, slip, and avalanche during a pulsar glitch:
+          </p>
+
+          <!-- 5 Pasta Selection Tabs -->
+          <div class="pasta-nav-row">
+            <button class="pasta-nav-item" data-pasta="gnocchi">
+              🍡 1. Gnocchi (Droplets)
+            </button>
+            <button class="pasta-nav-item active" data-pasta="spaghetti">
+              🥢 2. Spaghetti (Rods)
+            </button>
+            <button class="pasta-nav-item" data-pasta="lasagna">
+              🥞 3. Lasagna (Slabs)
+            </button>
+            <button class="pasta-nav-item" data-pasta="penne">
+              🥖 4. Penne (Tubes)
+            </button>
+            <button class="pasta-nav-item" data-pasta="cheese">
+              🧀 5. Swiss Cheese (Bubbles)
+            </button>
+          </div>
+
+          <!-- Interactive Pasta Detail Card -->
+          <div class="pasta-detail-card">
+            <!-- Left: Dynamic SVG Topology Schematic -->
+            <div class="pasta-svg-frame" id="pasta-svg-display">
+              <!-- Dynamically populated by js/group.js -->
+            </div>
+
+            <!-- Right: Physics & Glitch Pinning Telemetry -->
+            <div class="pasta-info-list">
+              <div>
+                <div class="pasta-info-lbl">Structure & Phase</div>
+                <div id="pasta-detail-name" style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-white);">
+                  Spaghetti (Cylindrical Rods)
+                </div>
+              </div>
+
+              <div class="param-grid" style="margin: 0.2rem 0;">
+                <div class="param-box" style="padding: 0.5rem 0.7rem;">
+                  <div class="param-lbl">Baryon Density</div>
+                  <div id="pasta-detail-density" class="param-val text-orange" style="font-size: 0.78rem;">0.08 – 0.15 n₀</div>
+                </div>
+                <div class="param-box" style="padding: 0.5rem 0.7rem;">
+                  <div class="param-lbl">Shear Modulus (μ)</div>
+                  <div id="pasta-detail-shear" class="param-val text-cyan" style="font-size: 0.78rem;">~ 6 × 10²⁹ dyn/cm²</div>
+                </div>
+              </div>
+
+              <div class="pasta-info-row">
+                <span class="pasta-info-lbl">Geometry & Topology:</span>
+                <span id="pasta-detail-geom">1D Continuous parallel nuclear cylinders</span> (<span id="pasta-detail-dim" class="text-orange">d = 1</span>)
+              </div>
+
+              <div class="pasta-info-row">
+                <span class="pasta-info-lbl">Vortex Pinning Interaction:</span>
+                <span id="pasta-detail-pin">Line-line intersection pinning. Vortices crossing transverse rods experience extremely high barrier forces (F_pin ~ 10¹⁵ dyn/cm).</span>
+              </div>
+
+              <div class="pasta-info-row">
+                <span class="pasta-info-lbl">Role in Pulsar Glitches:</span>
+                <span id="pasta-detail-glitch">Primary barrier for vortex outward motion. Large superfluid angular momentum lag (δΩ) accumulates here until hydrodynamic Magnus force overwhelms pinning.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glitch Observational & Dynamic Model Quad Showcase -->
+          <div class="glitch-figures-grid">
+            <div class="img-frame">
+              <img src="assets/images/glitch.png" alt="Pulsar Spin-Down Curve with Glitch Jump and Superfluid Relaxation">
+              <div class="img-caption" style="font-size: 0.76rem;">
+                <strong class="text-orange">Figure 6a: Glitch Spin-Down Dynamics.</strong> Steady electromagnetic spin-down ($\Omega_0(t)$) is abruptly interrupted by a microscopic vortex avalanche causing instantaneous spin-up ($\Delta\Omega_0$), followed by post-glitch relaxation ($Q\Delta\Omega_0$) as crust and superfluid re-equilibrate.
+              </div>
+            </div>
+
+            <div class="img-frame">
+              <img src="assets/images/glitch_three_component.jpg" alt="Three-Component Neutron Star Glitch Model: Core, Superfluid, and Observed Crust">
+              <div class="img-caption" style="font-size: 0.76rem;">
+                <strong class="text-cyan">Figure 6b: Three-Component Dynamic Model.</strong> Interaction between the Relativistic Core (A), Crustal Superfluid Vortex Reservoir (B), and Observed Outer Crust Component (C) during the sudden transfer of angular momentum ($\Delta J = I_{\text{sf}} \Delta\Omega$).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#cooling" class="btn-primary">
+            <i class="fa-solid fa-snowflake"></i> Next: Realtime Cooling Plot
+          </a>
+          <a href="#dark-heating" class="btn-secondary">
+            <i class="fa-solid fa-fire-flame-curved"></i> Dark Kinetic Heating
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 4: NEUTRON STAR COOLING & REALTIME PLOT (1 to 10^6 Years)
+         ========================================================================= -->
+    <section id="cooling" class="content-section" data-section="cooling">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Thermal Evolution & Neutrino Physics</span>
+        <h2 class="section-title">Neutron Star <span class="orange">Cooling Curves</span></h2>
+        <p class="section-subtitle">Realtime Thermal Evolution from 1 Year to 10⁶ Years with Observational Data</p>
+
+        <div class="grid-2col-wide">
+          <!-- Left: Realtime Cooling Simulation Chart & Time Scrubber -->
+          <div class="cooling-timeline-box">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+              <span style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--text-white);">
+                Realtime Cooling Plot (1 to 10⁶ Years)
+              </span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan);">Chandra / XMM-Newton</span>
+            </div>
+
+            <div class="chart-container-box">
+              <canvas id="cooling-chart"></canvas>
+            </div>
+
+            <!-- Time Scrubber Controls -->
+            <div class="timeline-scrubber-row">
+              <button id="cooling-play-btn" class="btn-primary" style="font-size: 0.76rem; padding: 0.4rem 0.85rem;">
+                <i class="fa-solid fa-play"></i> Play Evolution (1 → 10⁶ yr)
+              </button>
+              <input type="range" id="cooling-age-slider" class="timeline-slider" min="0" max="600" value="200" title="Scrub Stellar Age from 1 to 10^6 Years">
+            </div>
+
+            <!-- Live Telemetry Readouts for Selected Age -->
+            <div class="param-grid" style="margin-top: 0.85rem;">
+              <div class="param-box">
+                <div class="param-lbl">Stellar Age</div>
+                <div id="cooling-readout-age" class="param-val text-orange">100 Years</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Surface Temperature (Ts)</div>
+                <div id="cooling-readout-temp" class="param-val text-white">2,500,000 K</div>
+              </div>
+              <div class="param-box" style="grid-column: span 2;">
+                <div class="param-lbl">Active Cooling Regime</div>
+                <div id="cooling-readout-regime" class="param-val text-cyan">Neutrino Cooling Era (Modified Urca)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Detailed Explanations of Cooling Processes -->
+          <div>
+            <p class="section-p">
+              Born with an initial temperature of <strong class="text-red">$T \sim 10^{11}\text{ K}$</strong> ($10\text{ MeV}$), a neutron star undergoes distinct thermal epochs:
+            </p>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-cyan">1. Core-Crust Thermal Relaxation ($t < 100\text{ yr}$)</span>
+                <span class="process-speed slow">Thermal Wave</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                The core cools rapidly via neutrinos while the crust stays hot. A cooling wave travels from the core to the surface over $10 - 100\text{ years}$, plunging surface temperature down to $\sim 10^6\text{ K}$.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-orange">2. Neutrino Cooling Era ($100\text{ yr} < t < 10^5\text{ yr}$)</span>
+                <span class="process-speed fast">Modified Urca & PBF</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Neutrinos escape freely from the interior. Standard stars cool via <strong class="text-cyan">Modified Urca</strong> ($n+n \to n+p+e^-+\bar\nu_e$). Massive stars exceeding Direct Urca threshold plunge $10^6 \times$ faster!
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-white">3. Photon Cooling Era ($t > 10^5\text{ yr}$)</span>
+                <span class="process-speed slow">Surface Blackbody</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Neutrino emissivity fades as $T^8$; thermal photon radiation from the surface ($L_\gamma = 4\pi R^2 \sigma_{\text{SB}} T_s^4$) becomes the dominant cooling channel ($T_s \propto t^{-1/2}$).
+              </p>
+            </div>
+
+            <div class="formula-card red-border" style="margin-top: 0.75rem;">
+              <div class="formula-lbl">Direct Urca Momentum Triangle Condition</div>
+              <div class="katex-formula" data-formula="p_{F,n} \le p_{F,p} + p_{F,e} \implies x_p \ge 11.1\% - 14.8\%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#dark-heating" class="btn-primary">
+            <i class="fa-solid fa-fire-flame-curved"></i> Next: Dark Kinetic Heating
+          </a>
+          <a href="#research" class="btn-secondary">
+            <i class="fa-solid fa-code"></i> Research Software & Data
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 5: DARK KINETIC HEATING (Dedicated Page Requested!)
+         ========================================================================= -->
+    <section id="dark-heating" class="content-section" data-section="dark-heating">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Astroparticle Physics & Dark Matter Probes</span>
+        <h2 class="section-title">Dark <span class="orange">Kinetic Heating</span> of Neutron Stars</h2>
+        <p class="section-subtitle">How gravitational capture of ambient galactic dark matter sets a cosmic surface temperature floor</p>
+
+        <div class="grid-2col-wide">
+          <div>
+            <p class="section-p">
+              In standard stellar evolution theory, isolated neutron stars older than a few billion years should cool down to negligible temperatures ($T_s \ll 100\text{ K}$), rendering them completely dark and undetectable in optical and infrared bands.
+            </p>
+
+            <p class="section-p">
+              However, as old neutron stars traverse the galactic dark matter halo ($\rho_\chi \approx 0.4\text{ GeV/cm}^3$), their immense gravitational potential ($C = GM/Rc^2 \approx 0.2$) captures ambient dark matter particles ($\chi$), creating a continuous thermal heating mechanism known as <strong class="text-orange">Dark Kinetic Heating</strong>.
+            </p>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-orange">1. Relativistic Infall Acceleration</span>
+                <span class="process-speed fast">v_esc ~ 0.6 – 0.7 c</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Due to extreme gravitational pull, dark matter particles fall from galactic speeds ($v \sim 220\text{ km/s}$) and accelerate to relativistic escape velocity:
+                $$\gamma_{\text{esc}} = (1 - 2C)^{-1/2} \approx 1.35 - 1.5$$
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-red">2. Nuclear Collision & Kinetic Transfer</span>
+                <span class="process-speed fast">ΔE = (γ - 1) m_χ c²</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Upon entering the ultra-dense stellar core, dark matter particles scatter elastically against degenerate neutrons, depositing their immense relativistic kinetic energy into the core, heating the star from within.
+              </p>
+            </div>
+
+            <div class="process-card">
+              <div class="process-card-header">
+                <span class="process-title text-cyan">3. The Infrared Heating Floor</span>
+                <span class="process-speed transient">T_floor ~ 1,500 – 2,500 K</span>
+              </div>
+              <p style="font-size: 0.82rem; color: #cbd5e1;">
+                Kinetic heating balances surface thermal radiation, establishing a universal <strong class="text-orange">heating floor of $1500 - 2500\text{ K}$</strong> that persists indefinitely, preventing the star from ever freezing!
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Mathematical Formulas & Observation with JWST -->
+          <div>
+            <div class="formula-card">
+              <div class="formula-lbl">Dark Kinetic Heating Luminosity</div>
+              <div class="katex-formula" data-formula="L_{\text{kin}} = (\gamma - 1) \dot{M}_\chi c^2 \approx \pi R^2 \rho_\chi v_{\text{rel}} \left(\frac{2GM}{Rc^2}\right) \left[1 + \frac{2GM}{R v_{\text{rel}}^2}\right]"></div>
+            </div>
+
+            <div class="formula-card red-border">
+              <div class="formula-lbl">Asymptotic Surface Temperature Floor</div>
+              <div class="katex-formula" data-formula="T_{\text{kin}}^{\infty} = \left(\frac{L_{\text{kin}}}{4\pi R^2 \sigma_{\text{SB}}}\right)^{1/4} (1 - 2C)^{1/4} \approx 1500 - 2500 \text{ K}"></div>
+            </div>
+
+            <div class="param-grid" style="margin-top: 1rem;">
+              <div class="param-box">
+                <div class="param-lbl">Local DM Density</div>
+                <div class="param-val text-white">0.4 GeV/cm³</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Infall Speed</div>
+                <div class="param-val text-orange">~ 0.65 c</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Heating Floor</div>
+                <div class="param-val text-red">~ 1,800 K</div>
+              </div>
+              <div class="param-box">
+                <div class="param-lbl">Peak Wavelength</div>
+                <div class="param-val text-cyan">~ 1.5 – 3.0 μm (IR)</div>
+              </div>
+            </div>
+
+            <div class="img-frame" style="margin-top: 1rem;">
+              <div class="img-caption" style="padding: 1.1rem; line-height: 1.6; font-size: 0.82rem;">
+                <strong class="text-orange">🔭 Probing Dark Matter with JWST & 30-Meter Telescopes:</strong><br>
+                Because neutron stars have immense nuclear densities, they capture dark matter with extreme geometric cross-sections ($\sigma_{\chi n} \sim 10^{-45}\text{ cm}^2$).
+                Searching for old, warm, isolated neutron stars in infrared bands with the <em>James Webb Space Telescope (JWST)</em> and future 30-meter telescopes (ELT, TMT) tests dark matter models across mass regimes (from sub-GeV light dark matter to multi-TeV WIMPs) far beyond the sensitivity reach of terrestrial underground laboratories!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#research" class="btn-primary">
+            <i class="fa-solid fa-code"></i> Next: Softwares & Data Archives
+          </a>
+          <a href="#overview" class="btn-secondary">
+            <i class="fa-solid fa-arrow-up"></i> Return to Top
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 6: RESEARCH SOFTWARES & DATA WEBSITES
+         ========================================================================= -->
+    <section id="research" class="content-section" data-section="research">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Astrophysical Toolkit & Databases</span>
+        <h2 class="section-title">Research <span class="orange">Softwares & Data</span></h2>
+        <p class="section-subtitle">Premier numerical relativity packages, equation-of-state databases, and observational data repositories</p>
+
+        <div class="software-grid">
+          
+          <!-- Tool 1: CompOSE -->
+          <div class="software-card">
+            <div class="sw-category">Equation of State Database</div>
+            <div class="sw-name text-orange">CompOSE</div>
+            <p class="sw-desc">
+              CompStar Online Supernovae Equations of State. The definitive online service providing thermodynamic tables for neutron stars, proto-neutron stars, and core-collapse supernovae across a wide grid of density, temperature, and proton fractions.
+            </p>
+            <a href="https://compose.obspm.fr/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> compose.obspm.fr
+            </a>
+          </div>
+
+          <!-- Tool 2: LORENE -->
+          <div class="software-card">
+            <div class="sw-category">Numerical Relativity Library</div>
+            <div class="sw-name text-cyan">LORENE</div>
+            <p class="sw-desc">
+              Langage Objet pour la RElativité Numérique. A high-precision C++ object-oriented library based on multi-domain spectral methods. Used worldwide to construct 3D configurations of rapidly rotating relativistic stars and binary neutron star mergers.
+            </p>
+            <a href="https://lorene.obspm.fr/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> lorene.obspm.fr
+            </a>
+          </div>
+
+          <!-- Tool 3: NSCool -->
+          <div class="software-card">
+            <div class="sw-category">Thermal Evolution Solver</div>
+            <div class="sw-name text-red">NSCool</div>
+            <p class="sw-desc">
+              Dany Page's comprehensive 1D general-relativistic neutron star cooling code. Solves the coupled equations of energy transport and neutrino emissivity, incorporating superfluid pairing gaps, magnetic field evolution, and crust heating.
+            </p>
+            <a href="http://www.astroscu.unam.mx/neutrons/NSCool/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> astroscu.unam.mx/neutrons/NSCool
+            </a>
+          </div>
+
+          <!-- Tool 4: RNS -->
+          <div class="software-card">
+            <div class="sw-category">Rapidly Rotating Stars</div>
+            <div class="sw-name text-white">RNS Code</div>
+            <p class="sw-desc">
+              Developed by Nikolaos Stergioulas. Computes models of rapidly rotating, relativistic neutron stars with realistic equations of state using the Komatsu-Eriguchi-Hachisu (KEH) numerical scheme. Calculates maximum mass, Keplerian spin limits, and moment of inertia.
+            </p>
+            <a href="http://www.gravity.phys.uwm.edu/rns/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> gravity.phys.uwm.edu/rns
+            </a>
+          </div>
+
+          <!-- Tool 5: TEMPO2 & PINT -->
+          <div class="software-card">
+            <div class="sw-category">Pulsar Timing Analysis</div>
+            <div class="sw-name text-cyan">TEMPO2 & PINT</div>
+            <p class="sw-desc">
+              High-precision pulsar timing software packages capable of nanosecond timing residuals. Used by international pulsar timing arrays (NANOGrav, EPTA, PPTA) for detecting nanohertz gravitational waves and probing nuclear equations of state via Shapiro delays.
+            </p>
+            <a href="https://bitbucket.org/psrsoft/tempo2/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> bitbucket.org/psrsoft/tempo2
+            </a>
+          </div>
+
+          <!-- Tool 6: ATNF Pulsar Catalogue -->
+          <div class="software-card">
+            <div class="sw-category">Observational Database</div>
+            <div class="sw-name text-orange">ATNF Pulsar Catalogue</div>
+            <p class="sw-desc">
+              The Australia Telescope National Facility (ATNF) catalogue containing published parameters for over 3,300 known rotation-powered pulsars, millisecond pulsars, magnetars, and binary systems with live query filters.
+            </p>
+            <a href="https://www.atnf.csiro.au/research/pulsar/psrcat/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> atnf.csiro.au/research/pulsar/psrcat
+            </a>
+          </div>
+
+          <!-- Tool 7: NICER Data Archive -->
+          <div class="software-card">
+            <div class="sw-category">NASA High Energy Archive</div>
+            <div class="sw-name text-white">NASA NICER / HEASARC</div>
+            <p class="sw-desc">
+              NASA's Neutron star Interior Composition Explorer (NICER) mission data on the International Space Station. Delivers pulse-profile modeling to simultaneously constrain mass and radius ($M$ and $R$) to within $5\%$.
+            </p>
+            <a href="https://heasarc.gsfc.nasa.gov/docs/nicer/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> heasarc.gsfc.nasa.gov/docs/nicer
+            </a>
+          </div>
+
+          <!-- Tool 8: GWOSC -->
+          <div class="software-card">
+            <div class="sw-category">Gravitational Waves</div>
+            <div class="sw-name text-red">GWOSC (LIGO / Virgo / KAGRA)</div>
+            <p class="sw-desc">
+              Gravitational Wave Open Science Center. Open-access strain data, tutorials, and parameter estimation posteriors for binary neutron star mergers (such as GW170817 and GW190425) and neutron star-black hole coalescences.
+            </p>
+            <a href="https://gw-openscience.org/" target="_blank" rel="noopener noreferrer" class="sw-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> gw-openscience.org
+            </a>
+          </div>
+
+        </div>
+
+        <div class="btn-group" style="margin-top: 1.5rem;">
+          <a href="#group" class="btn-primary">
+            <i class="fa-solid fa-users"></i> Next: Our Research Group
+          </a>
+          <a href="#overview" class="btn-secondary">
+            <i class="fa-solid fa-arrow-up"></i> Return to Top
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 7: OUR RESEARCH GROUP (Astrophysics & Dense Matter Theory)
+         ========================================================================= -->
+    <section id="group" class="content-section" data-section="group">
+      <div class="minimal-card wide" style="--card-accent: var(--color-orange);">
+        <span class="section-tag">Department of Physics · Indian Institute of Technology Jodhpur</span>
+        <h2 class="section-title">Our <span class="orange">Research Group</span></h2>
+        <p class="section-subtitle">Theoretical astrophysics, dense nuclear and quark matter, pulsar glitch mechanisms, and compact star phenomenology</p>
+
+        <!-- INTRODUCTION: WHAT WE STUDY -->
+        <div class="group-intro-banner">
+          <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-white); margin-bottom: 0.6rem;">
+            <i class="fa-solid fa-atom text-orange"></i> What We Study: Dense Matter & Compact Star Physics
+          </h3>
+          <p class="section-p" style="font-size: 0.88rem; margin-bottom: 0.75rem;">
+            Our research group at the <strong class="text-white">Indian Institute of Technology (IIT) Jodhpur</strong>, led by <strong class="text-orange">Dr. Monika Sinha</strong>, investigates the fundamental nature of matter under the most extreme conditions in the universe. Neutron stars, pulsars, and magnetars achieve central core densities several times higher than nuclear saturation density ($\rho_0 \approx 2.8 \times 10^{14}\text{ g/cm}^3$), gravitational fields near the event horizon limit ($C \sim 0.2$), and magnetic fields up to $10^{15}\text{ Gauss}$. 
+          </p>
+          <p class="section-p" style="font-size: 0.88rem;">
+            By developing relativistic many-body theoretical models, Bayesian parameter estimation frameworks, and high-performance numerical simulations, we confront fundamental physics with multi-messenger astronomical observations from gravitational wave interferometers (LIGO, Virgo, KAGRA), X-ray observatories (NICER, Chandra, XMM-Newton), and radio pulsar timing arrays.
+          </p>
+
+          <!-- 4 Core Pillars of Study -->
+          <div class="group-study-pillars">
+            <div class="study-pillar-box">
+              <div class="pillar-title text-orange">
+                <i class="fa-solid fa-layer-group"></i> Dense Matter Equations of State (EOS)
+              </div>
+              <p class="pillar-desc">
+                Constructing relativistic equations of state incorporating nucleonic degrees of freedom, hyperons ($\Lambda, \Sigma, \Xi$), $\Delta$-isobars, antikaon ($\bar{K}$) condensation, and quark-hadron phase transitions.
+              </p>
+            </div>
+
+            <div class="study-pillar-box" style="border-left-color: var(--color-cyan);">
+              <div class="pillar-title text-cyan">
+                <i class="fa-solid fa-bolt-lightning"></i> Glitch Dynamics & Superfluidity
+              </div>
+              <p class="pillar-desc">
+                Microscopic modeling of quantized neutron vortex pinning in inner-crust nuclear pasta topologies, Magnus force stress accumulation, catastrophic unpinning avalanches, and core superfluidity in hybrid stars.
+              </p>
+            </div>
+
+            <div class="study-pillar-box" style="border-left-color: var(--color-red);">
+              <div class="pillar-title text-red">
+                <i class="fa-solid fa-snowflake"></i> Thermal Evolution & Cooling
+              </div>
+              <p class="pillar-desc">
+                Solving general-relativistic thermal transport equations to track thermal evolution from $10^{11}\text{ K}$ to late times, incorporating $\Delta$-direct Urca processes, modified Urca, and pairing gaps.
+              </p>
+            </div>
+
+            <div class="study-pillar-box" style="border-left-color: #a855f7;">
+              <div class="pillar-title" style="color: #c084fc;">
+                <i class="fa-solid fa-wave-square"></i> Gravitational Waves & Dark Matter
+              </div>
+              <p class="pillar-desc">
+                Investigating tidal deformabilities ($\tilde{\Lambda}$) from binary neutron star mergers (GW170817, GW190814), $r$-mode oscillation stability, universal relations, and dark-matter admixed compact stars.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CITATION STATISTICS DASHBOARD -->
+        <div class="citation-dashboard">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-white);">
+              <i class="fa-solid fa-chart-line text-orange"></i> Group Citation & Research Impact Statistics
+            </h3>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-cyan);">
+              Indexed on Google Scholar &amp; INSPIRE-HEP
+            </span>
+          </div>
+
+          <div class="citation-stats-grid">
+            <div class="citation-stat-card" style="--stat-glow: var(--color-orange);">
+              <div class="stat-number">1,200+</div>
+              <div class="stat-label">Refereed Citations</div>
+              <div class="stat-subtext">Scopus / Web of Science (~2,470+ on Scholar)</div>
+            </div>
+
+            <div class="citation-stat-card" style="--stat-glow: var(--color-cyan);">
+              <div class="stat-number">12+</div>
+              <div class="stat-label">h-Index</div>
+              <div class="stat-subtext">Sustained high-impact works</div>
+            </div>
+
+            <div class="citation-stat-card" style="--stat-glow: #a855f7;">
+              <div class="stat-number">12+</div>
+              <div class="stat-label">i10-Index</div>
+              <div class="stat-subtext">Papers with ≥ 10 citations</div>
+            </div>
+
+            <div class="citation-stat-card" style="--stat-glow: var(--color-red);">
+              <div class="stat-number">45+</div>
+              <div class="stat-label">Peer-Reviewed Papers</div>
+              <div class="stat-subtext">PRD, MNRAS, ApJ, JCAP, PLB</div>
+            </div>
+          </div>
+
+          <div class="citation-meta-bar">
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">
+              <strong class="text-white">Global Collaborations:</strong> University of Wrocław (Poland) · INFN Pisa (Italy) · Goethe Univ Frankfurt · IUCAA Pune · SINP Kolkata
+            </div>
+            <div class="citation-links">
+              <a href="https://scholar.google.com/citations?user=Yq4u6h4AAAAJ" target="_blank" rel="noopener noreferrer" class="citation-btn">
+                <i class="fa-brands fa-google-scholar"></i> Google Scholar
+              </a>
+              <a href="https://inspirehep.net/authors" target="_blank" rel="noopener noreferrer" class="citation-btn">
+                <i class="fa-solid fa-atom"></i> INSPIRE-HEP
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GROUP MEMBERS DIRECTORY (WITH SMALL PHOTO OPTION) -->
+        <div style="margin-top: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-white);">
+              <i class="fa-solid fa-users text-orange"></i> Group Members
+            </h3>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-muted);">
+              Click the <i class="fa-solid fa-camera text-orange"></i> camera icon on any member to upload or customize their photo!
+            </span>
+          </div>
+
+          <div class="members-grid">
+            
+            <!-- Member 1: Dr. Monika Sinha (PI / Leader) -->
+            <div class="member-card leader-card">
+              <div class="member-photo-wrapper">
+                <div class="member-photo" id="photo-monika" data-initials="MS" data-icon="fa-user-tie">
+                  <div class="avatar-fallback">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span class="avatar-initials">MS</span>
+                  </div>
+                </div>
+                <label class="photo-upload-label" title="Upload / change photo">
+                  <i class="fa-solid fa-camera"></i>
+                  <input type="file" accept="image/*" class="photo-upload-input" data-target="photo-monika">
+                </label>
+                <button type="button" class="photo-reset-btn" title="Reset photo" data-target="photo-monika">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="member-content">
+                <div class="member-header-row">
+                  <div class="member-name">Dr. Monika Sinha</div>
+                  <span class="member-status-tag">Principal Investigator</span>
+                </div>
+                <div class="member-title">Assistant Professor, Department of Physics</div>
+                <div class="member-affil">Indian Institute of Technology (IIT) Jodhpur · Former Alexander von Humboldt Fellow (Goethe Univ Frankfurt)</div>
+                <p class="member-topics">
+                  <strong>Research Specialization:</strong> Dense matter equations of state, magnetars and strongly magnetized relativistic matter, strange quark matter, hadron-quark phase transitions, hyperon bulk viscosity, and relativistic compact stars.
+                </p>
+                <div class="member-tags">
+                  <span class="member-tag">Dense Matter EOS</span>
+                  <span class="member-tag">Magnetars</span>
+                  <span class="member-tag">Strange Quark Matter</span>
+                  <span class="member-tag">Relativistic Astrophysics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 2: Dr. Vivek Baruah Thapa -->
+            <div class="member-card">
+              <div class="member-photo-wrapper">
+                <div class="member-photo cyan-ring" id="photo-vivek" data-initials="VT" data-icon="fa-user-graduate">
+                  <div class="avatar-fallback">
+                    <i class="fa-solid fa-user-graduate" style="color: var(--color-cyan);"></i>
+                    <span class="avatar-initials">VT</span>
+                  </div>
+                </div>
+                <label class="photo-upload-label" title="Upload / change photo" style="background: var(--color-cyan);">
+                  <i class="fa-solid fa-camera"></i>
+                  <input type="file" accept="image/*" class="photo-upload-input" data-target="photo-vivek">
+                </label>
+                <button type="button" class="photo-reset-btn" title="Reset photo" data-target="photo-vivek">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="member-content">
+                <div class="member-header-row">
+                  <div class="member-name">Dr. Vivek Baruah Thapa</div>
+                  <span class="member-status-tag" style="background: rgba(56, 189, 248, 0.12); color: var(--color-cyan); border-color: rgba(56, 189, 248, 0.25);">Alumnus / Faculty</span>
+                </div>
+                <div class="member-title">Former PhD Scholar (IIT Jodhpur) / Assistant Professor, BSSRV</div>
+                <div class="member-affil">IIT Jodhpur (PhD 2022) · Birangana Sati Sadhani Rajyik Vishwavidyalaya, Assam</div>
+                <p class="member-topics">
+                  <strong>Research:</strong> Dense matter EOS with hyperons &amp; $\Delta$-resonances, tidal deformability constraints, PREX-2 direct Urca implications, and magnetized compact stars.
+                </p>
+                <div class="member-tags">
+                  <span class="member-tag">Hyperons &amp; Δ</span>
+                  <span class="member-tag">PREX-2</span>
+                  <span class="member-tag">Tidal Deformability</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 3: Dr. Anil Kumar -->
+            <div class="member-card">
+              <div class="member-photo-wrapper">
+                <div class="member-photo" id="photo-anil" data-initials="AK" data-icon="fa-user-astronaut">
+                  <div class="avatar-fallback">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <span class="avatar-initials">AK</span>
+                  </div>
+                </div>
+                <label class="photo-upload-label" title="Upload / change photo">
+                  <i class="fa-solid fa-camera"></i>
+                  <input type="file" accept="image/*" class="photo-upload-input" data-target="photo-anil">
+                </label>
+                <button type="button" class="photo-reset-btn" title="Reset photo" data-target="photo-anil">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="member-content">
+                <div class="member-header-row">
+                  <div class="member-name">Dr. Anil Kumar</div>
+                  <span class="member-status-tag" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Postdoctoral Researcher</span>
+                </div>
+                <div class="member-title">Postdoctoral Researcher, University of Wrocław, Poland</div>
+                <div class="member-affil">Former PhD Scholar, Department of Physics, IIT Jodhpur · Institute of Theoretical Physics, University of Wrocław</div>
+                <p class="member-topics">
+                  <strong>Primary Research:</strong> Strange Quark Matter, quark-hadron phase transitions, universal relations for compact stars with exotic degrees of freedom, and dark-matter admixed neutron stars.
+                </p>
+                <div class="member-tags">
+                  <span class="member-tag">Strange Quark Matter</span>
+                  <span class="member-tag">Univ of Wrocław</span>
+                  <span class="member-tag">Universal Relations</span>
+                  <span class="member-tag">Dark Matter</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 4: Dr. Vishal Parmar -->
+            <div class="member-card">
+              <div class="member-photo-wrapper">
+                <div class="member-photo red-ring" id="photo-vishal" data-initials="VP" data-icon="fa-atom">
+                  <div class="avatar-fallback">
+                    <i class="fa-solid fa-atom" style="color: var(--color-red);"></i>
+                    <span class="avatar-initials">VP</span>
+                  </div>
+                </div>
+                <label class="photo-upload-label" title="Upload / change photo" style="background: var(--color-red); color: #fff;">
+                  <i class="fa-solid fa-camera"></i>
+                  <input type="file" accept="image/*" class="photo-upload-input" data-target="photo-vishal">
+                </label>
+                <button type="button" class="photo-reset-btn" title="Reset photo" data-target="photo-vishal">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="member-content">
+                <div class="member-header-row">
+                  <div class="member-name">Dr. Vishal Parmar</div>
+                  <span class="member-status-tag" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Postdoctoral Researcher</span>
+                </div>
+                <div class="member-title">Postdoctoral Researcher, INFN Sezione di Pisa, Italy</div>
+                <div class="member-affil">Former PhD Scholar, Department of Physics, IIT Jodhpur · Istituto Nazionale di Fisica Nucleare (INFN) Pisa</div>
+                <p class="member-topics">
+                  <strong>Research:</strong> $\Delta$-resonances in dense matter, Bayesian inference of EOS with antikaon condensation, $r$-mode stabilization in rotating hyperon stars, and gravitational-wave implications (GW190814).
+                </p>
+                <div class="member-tags">
+                  <span class="member-tag">INFN Pisa</span>
+                  <span class="member-tag">Δ-Resonances</span>
+                  <span class="member-tag">Antikaons</span>
+                  <span class="member-tag">r-Mode Stability</span>
+                  <span class="member-tag">GW190814</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 5: Yogeesh N -->
+            <div class="member-card">
+              <div class="member-photo-wrapper">
+                <div class="member-photo cyan-ring" id="photo-yogeesh" data-initials="YN" data-icon="fa-user-pen">
+                  <div class="avatar-fallback">
+                    <i class="fa-solid fa-user-pen" style="color: var(--color-cyan);"></i>
+                    <span class="avatar-initials">YN</span>
+                  </div>
+                </div>
+                <label class="photo-upload-label" title="Upload / change photo" style="background: var(--color-cyan);">
+                  <i class="fa-solid fa-camera"></i>
+                  <input type="file" accept="image/*" class="photo-upload-input" data-target="photo-yogeesh">
+                </label>
+                <button type="button" class="photo-reset-btn" title="Reset photo" data-target="photo-yogeesh">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="member-content">
+                <div class="member-header-row">
+                  <div class="member-name">Yogeesh N</div>
+                  <span class="member-status-tag">Research Scholar</span>
+                </div>
+                <div class="member-title">Research Scholar, Department of Physics</div>
+                <div class="member-affil">Indian Institute of Technology (IIT) Jodhpur</div>
+                <p class="member-topics">
+                  <strong>Research:</strong> Neutron star cooling with $\Delta$-dUrca processes, modeling large pulsar glitches with core superfluidity in hybrid stars, and relativistic dense-matter thermal transport.
+                </p>
+                <div class="member-tags">
+                  <span class="member-tag">Δ-dUrca Cooling</span>
+                  <span class="member-tag">Large Glitches</span>
+                  <span class="member-tag">Core Superfluidity</span>
+                  <span class="member-tag">Hybrid Stars</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 6: Athira S -->
+            <div class="member-card">
+              <div class="member-photo-wrapper">
+                <div class="member-photo" id="photo-athira" data-initials="AS" data-icon="fa-dna">
+                  <div class="avatar-fallback">
+                    <i class="fa-solid fa-dna"></i>
+                    <span class="avatar-initials">AS</span>
+                  </div>
+                </div>
+                <label class="photo-upload-label" title="Upload / change photo">
+                  <i class="fa-solid fa-camera"></i>
+                  <input type="file" accept="image/*" class="photo-upload-input" data-target="photo-athira">
+                </label>
+                <button type="button" class="photo-reset-btn" title="Reset photo" data-target="photo-athira">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="member-content">
+                <div class="member-header-row">
+                  <div class="member-name">Athira S</div>
+                  <span class="member-status-tag">Research Scholar</span>
+                </div>
+                <div class="member-title">Research Scholar, Department of Physics</div>
+                <div class="member-affil">Indian Institute of Technology (IIT) Jodhpur</div>
+                <p class="member-topics">
+                  <strong>Research:</strong> Kaon-meson coupling from SU(3) flavour symmetry, antikaon condensed dense matter in neutron stars (JCAP), and Bayesian model comparison of nucleonic and hyperonic compositions.
+                </p>
+                <div class="member-tags">
+                  <span class="member-tag">SU(3) Flavour</span>
+                  <span class="member-tag">Antikaons (JCAP)</span>
+                  <span class="member-tag">Bayesian Inference</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 7: Samyak Jain -->
+            <div class="member-card">
+              <div class="member-photo-wrapper">
+                <div class="member-photo cyan-ring" id="photo-samyak" data-initials="SJ" data-icon="fa-circle-nodes">
+                  <div class="avatar-fallback">
+                    <i class="fa-solid fa-circle-nodes" style="color: var(--color-cyan);"></i>
+                    <span class="avatar-initials">SJ</span>
+                  </div>
+                </div>
+                <label class="photo-upload-label" title="Upload / change photo" style="background: var(--color-cyan);">
+                  <i class="fa-solid fa-camera"></i>
+                  <input type="file" accept="image/*" class="photo-upload-input" data-target="photo-samyak">
+                </label>
+                <button type="button" class="photo-reset-btn" title="Reset photo" data-target="photo-samyak">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <div class="member-content">
+                <div class="member-header-row">
+                  <div class="member-name">Samyak Jain</div>
+                  <span class="member-status-tag">Research Scholar</span>
+                </div>
+                <div class="member-title">Research Scholar, Department of Physics</div>
+                <div class="member-affil">Indian Institute of Technology (IIT) Jodhpur</div>
+                <p class="member-topics">
+                  <strong>Research Focus:</strong> Investigating <strong>Dibaryons</strong> (such as the $d^*(2380)$ hexaquark resonance and $H$-dibaryon) in neutron star matter, dense equations of state, and their implications on compact star structures and maximum masses.
+                </p>
+                <div class="member-tags">
+                  <span class="member-tag">Dibaryons in Neutron Stars</span>
+                  <span class="member-tag">d*(2380) Resonance</span>
+                  <span class="member-tag">Dense Matter EOS</span>
+                  <span class="member-tag">Hadron Physics</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- FORMER MSC THESIS STUDENTS & ALUMNI -->
+          <div class="alumni-section">
+            <h4 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-white); margin-bottom: 0.35rem;">
+              <i class="fa-solid fa-graduation-cap" style="color: #c084fc;"></i> Former MSc Thesis Students / Alumni
+            </h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.85rem;">
+              Graduated master's thesis researchers from our IIT Jodhpur laboratory, now pursuing doctoral research in Virginia, USA:
+            </p>
+
+            <div class="alumni-grid">
+              <!-- Alumni 1: Pratik Thakur -->
+              <div class="alumni-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                  <strong style="color: var(--text-white); font-family: var(--font-display); font-size: 0.98rem;">Pratik Thakur</strong>
+                  <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #c084fc;">PhD Scholar, Virginia (USA)</span>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan); margin-bottom: 0.4rem;">
+                  Former MSc Thesis Student · IIT Jodhpur
+                </div>
+                <p style="font-size: 0.79rem; color: #94a3b8; line-height: 1.45;">
+                  <strong>Thesis Research:</strong> Investigated <strong>Dark Matter</strong> in compact stars, non-radial quadrupolar oscillation modes ($f$-modes, $p$-modes), and two-fluid general relativistic equations of state.
+                </p>
+              </div>
+
+              <!-- Alumni 2: Manoj Kumar Ghosh -->
+              <div class="alumni-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                  <strong style="color: var(--text-white); font-family: var(--font-display); font-size: 0.98rem;">Manoj Kumar Ghosh</strong>
+                  <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #c084fc;">PhD Scholar, Virginia (USA)</span>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan); margin-bottom: 0.4rem;">
+                  Former MSc Thesis Student · IIT Jodhpur
+                </div>
+                <p style="font-size: 0.79rem; color: #94a3b8; line-height: 1.45;">
+                  <strong>Thesis Research:</strong> Investigated <strong>Ambipolar Diffusion</strong> in neutron stars and universal relations for compact stars with exotic degrees of freedom.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUBLICATIONS DIRECTORY -->
+        <div class="publications-section">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-white);">
+              <i class="fa-solid fa-book-bookmark text-orange"></i> Group Publications &amp; Preprints
+            </h3>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-muted);">
+              Click "Copy BibTeX" for instant citation formatting
+            </span>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="pub-filter-bar">
+            <button class="pub-filter-btn active" data-filter="all">All Publications</button>
+            <button class="pub-filter-btn" data-filter="glitches">Glitches &amp; Superfluidity</button>
+            <button class="pub-filter-btn" data-filter="cooling">Cooling &amp; Neutrinos</button>
+            <button class="pub-filter-btn" data-filter="eos">Equation of State &amp; Exotics</button>
+            <button class="pub-filter-btn" data-filter="dark-matter">Dark Matter &amp; Oscillations</button>
+          </div>
+
+          <!-- Publication Cards List -->
+          <div class="publications-list">
+
+            <!-- Paper 1: Cooling with Delta dUrca (Yogeesh, Vishal, Monika) -->
+            <div class="pub-card" data-category="cooling eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Neutron star cooling with Δ dUrca processes</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> arXiv:2610.11435 [astro-ph.HE]</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-clock"></i> Recent Preprint (2026)</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2026 · arXiv</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Yogeesh N</strong>, <strong>Dr. Vishal Parmar</strong>, <strong>Dr. Monika Sinha</strong>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Investigates general relativistic thermal evolution of neutron stars incorporating $\Delta$-isobar direct Urca processes ($\Delta \to n + e^- + \bar\nu_e$). Demonstrates how $\Delta$-dUrca dramatically accelerates neutrino emissivity and reconciles rapid cooling observations with mass-radius constraints.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">Astrophysics - High Energy Astrophysical Phenomena</div>
+                <div class="pub-actions">
+                  <a href="https://arxiv.org/abs/2610.11435" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Yogeesh:2026cooling,
+  author = {Yogeesh, N. and Parmar, Vishal and Sinha, Monika},
+  title = {Neutron star cooling with $\Delta$ dUrca processes},
+  eprint = {2610.11435},
+  archivePrefix = {arXiv},
+  primaryClass = {astro-ph.HE},
+  year = {2026}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 2: Modeling large glitches with core superfluidity (Yogeesh, Vishal, Monika) -->
+            <div class="pub-card" data-category="glitches eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Modeling large glitches with core superfluidity in a Hybrid star</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> arXiv:2605.02467 [astro-ph.HE]</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 5 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2026 · arXiv</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Yogeesh N</strong>, <strong>Dr. Vishal Parmar</strong>, <strong>Dr. Monika Sinha</strong>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Proposes a multi-component hybrid star framework coupling core and inner-crust nuclear pasta superfluidity to explain anomalously giant pulsar glitches ($\Delta\Omega/\Omega \sim 10^{-5}$) exceeding crustal moment-of-inertia budgets.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">arXiv:2605.02467</div>
+                <div class="pub-actions">
+                  <a href="https://arxiv.org/abs/2605.02467" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Yogeesh:2026glitches,
+  author = {Yogeesh, N. and Parmar, Vishal and Sinha, Monika},
+  title = {Modeling large glitches with core superfluidity in a Hybrid star},
+  eprint = {2605.02467},
+  archivePrefix = {arXiv},
+  primaryClass = {astro-ph.HE},
+  year = {2026}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 3: r-mode stabilization (Vishal, Vivek, Monika, Ignazio) -->
+            <div class="pub-card" data-category="eos dark-matter">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">r-mode stabilization in rotating hyperon-rich neutron stars and its implications for GW190814</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> arXiv:2602.21651 [astro-ph.HE]</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 6 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2026 · arXiv</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Vishal Parmar</strong>, <strong>Dr. Vivek Baruah Thapa</strong>, <strong>Dr. Monika Sinha</strong>, Ignazio Bombaci
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Examines hyperon bulk viscosity damping of gravitational-radiation driven $r$-mode instabilities. Identifies spin frequencies allowing the secondary compact object of GW190814 ($2.59 M_\odot$) to be a rapidly rotating hyperonic neutron star.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">arXiv:2602.21651</div>
+                <div class="pub-actions">
+                  <a href="https://arxiv.org/abs/2602.21651" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Parmar:2026rmode,
+  author = {Parmar, Vishal and Thapa, Vivek Baruah and Sinha, Monika and Bombaci, Ignazio},
+  title = {$r$-mode stabilization in rotating hyperon-rich neutron stars and its implications for GW190814},
+  eprint = {2602.21651},
+  archivePrefix = {arXiv},
+  primaryClass = {astro-ph.HE},
+  year = {2026}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 4: Kaon-meson coupling from SU(3) (Athira, Vishal, Monika) -->
+            <div class="pub-card" data-category="eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Kaon-meson coupling from SU(3) flavour symmetry and application to antikaon condensed dense matter</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> Journal of Cosmology and Astroparticle Physics (JCAP), 2025</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 11 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2025 · JCAP</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Athira S.</strong>, <strong>Dr. Vishal Parmar</strong>, <strong>Dr. Monika Sinha</strong>, et al.
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Derives kaon-meson coupling constants strictly based on SU(3) flavour symmetry to investigate $s$-wave $K^-$ and $\bar{K}^0$ condensation in cold dense matter, evaluating softening effects on neutron star maximum mass and tidal deformability.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">JCAP 2025</div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1088/1475-7516" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Athira:2025kaon,
+  author = {Athira, S. and Parmar, Vishal and Sinha, Monika},
+  title = {Kaon-meson coupling from SU(3) flavour symmetry and application to antikaon condensed dense matter in neutron star},
+  journal = {JCAP},
+  year = {2025}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 5: Delta-resonance implications (Vishal, Vivek, Monika, Bombaci) -->
+            <div class="pub-card" data-category="eos cooling">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Exploring the Δ-resonance in neutron stars: Implications from astrophysical and nuclear observations</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> Physical Review D 111, 2025</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 14 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2025 · Phys. Rev. D</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Vishal Parmar</strong>, <strong>Dr. Vivek Baruah Thapa</strong>, <strong>Dr. Monika Sinha</strong>, Ignazio Bombaci
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Analyzes the early appearance of $\Delta$-isobars in nucleonic matter under unified relativistic mean-field models, comparing resulting radii ($R_{1.4}$) and tidal deformabilities against NICER and LIGO/Virgo limits.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">Phys. Rev. D 111 (2025)</div>
+                <div class="pub-actions">
+                  <a href="https://journals.aps.org/prd" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Parmar:2025delta,
+  author = {Parmar, Vishal and Thapa, Vivek Baruah and Sinha, Monika and Bombaci, Ignazio},
+  title = {Exploring the $\Delta$-resonance in neutron stars: Implications from astrophysical and nuclear observations},
+  journal = {Phys. Rev. D},
+  year = {2025}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 6: Dark Matter Oscillation Modes (Pratik, Anil, Vivek, Vishal, Monika) -->
+            <div class="pub-card" data-category="dark-matter">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Exploring non-radial oscillation modes in dark matter admixed neutron stars</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> arXiv:2406.07470 [astro-ph.HE]</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 9 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2024 · arXiv</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Pratik Thakur</strong>, <strong>Dr. Anil Kumar</strong>, <strong>Dr. Vivek Baruah Thapa</strong>, <strong>Dr. Vishal Parmar</strong>, <strong>Dr. Monika Sinha</strong>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Employs a two-fluid general relativistic formalism to compute quadrupolar non-radial fundamental ($f$) and pressure ($p$) oscillation modes in neutron stars admixed with self-interacting fermionic dark matter.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">arXiv:2406.07470</div>
+                <div class="pub-actions">
+                  <a href="https://arxiv.org/abs/2406.07470" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Thakur:2024dm,
+  author = {Thakur, Pratik and Kumar, Anil and Thapa, Vivek Baruah and Parmar, Vishal and Sinha, Monika},
+  title = {Exploring non-radial oscillation modes in dark matter admixed neutron stars},
+  eprint = {2406.07470},
+  archivePrefix = {arXiv},
+  year = {2024}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 7: Bayesian Inference Antikaon (Vishal, Vivek, Anil, Debades, Monika) -->
+            <div class="pub-card" data-category="eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Bayesian Inference of dense matter equation of state of neutron star with antikaon condensation</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> arXiv:2409.19451 [astro-ph.HE]</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 8 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2024 · arXiv</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Vishal Parmar</strong>, <strong>Dr. Vivek Baruah Thapa</strong>, <strong>Dr. Anil Kumar</strong>, Debades Bandyopadhyay, <strong>Dr. Monika Sinha</strong>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Performs a Bayesian parameter inference conditioning antikaon optical potentials ($U_K$) against multi-messenger observational constraints, quantifying the threshold density for $K^-$ condensation.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">arXiv:2409.19451</div>
+                <div class="pub-actions">
+                  <a href="https://arxiv.org/abs/2409.19451" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Parmar:2024bayes,
+  author = {Parmar, Vishal and Thapa, Vivek Baruah and Kumar, Anil and Bandyopadhyay, Debades and Sinha, Monika},
+  title = {Bayesian Inference of dense matter equation of state of neutron star with antikaon condensation},
+  eprint = {2409.19451},
+  archivePrefix = {arXiv},
+  year = {2024}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 8: Universal Relations (Anil, Manoj, Pratik, Vivek, Monika) -->
+            <div class="pub-card" data-category="dark-matter eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Universal relations for compact stars with exotic degrees of freedom</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> arXiv:2311.15277 [astro-ph.HE]</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 12 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2023 · arXiv</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Anil Kumar</strong>, <strong>Manoj Kumar Ghosh</strong>, <strong>Pratik Thakur</strong>, <strong>Dr. Vivek Baruah Thapa</strong>, <strong>Dr. Monika Sinha</strong>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Investigates I-Love-Q and $f$-mode universal relations across equations of state containing hyperons, $\Delta$-resonances, and dark matter, demonstrating that EOS universality holds robustly despite exotic phase transitions.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">arXiv:2311.15277</div>
+                <div class="pub-actions">
+                  <a href="https://arxiv.org/abs/2311.15277" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Kumar:2023universal,
+  author = {Kumar, Anil and Ghosh, Manoj Kumar and Thakur, Pratik and Thapa, Vivek Baruah and Sinha, Monika},
+  title = {Universal relations for compact stars with exotic degrees of freedom},
+  eprint = {2311.15277},
+  archivePrefix = {arXiv},
+  year = {2023}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 9: Direct URCA process in light of PREX-2 (Vivek, Monika) -->
+            <div class="pub-card" data-category="cooling eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Direct URCA process in light of PREX-2</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> Physical Review D 105, 123007 (2022)</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 28 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2022 · Phys. Rev. D</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Vivek Baruah Thapa</strong>, <strong>Dr. Monika Sinha</strong>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Analyzes the proton fraction $x_p$ and the opening threshold of the Direct Urca neutrino cooling process using nuclear symmetry energy parameters constrained by the PREX-2 lead radius measurement.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">Phys. Rev. D 105, 123007</div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1103/PhysRevD.105.123007" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Thapa:2022prex,
+  author = {Thapa, Vivek Baruah and Sinha, Monika},
+  title = {Direct URCA process in light of PREX-2},
+  journal = {Phys. Rev. D},
+  volume = {105},
+  pages = {123007},
+  year = {2022}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 10: Magnetized Matter with Hyperons and Delta (Vivek, Monika, Debades) -->
+            <div class="pub-card" data-category="eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Equation of state of strongly magnetized matter with hyperons and Δ-resonances</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> Physical Review D 103, 063004 (2021)</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 24 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2021 · Phys. Rev. D</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Vivek Baruah Thapa</strong>, <strong>Dr. Monika Sinha</strong>, Debades Bandyopadhyay
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Constructs relativistic mean-field equations of state under intense magnetic fields ($B \sim 10^{18}\text{ G}$), evaluating Landau quantization of protons, hyperons, and $\Delta$-baryons in magnetars.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">Phys. Rev. D 103, 063004</div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1103/PhysRevD.103.063004" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Thapa:2021magnetized,
+  author = {Thapa, Vivek Baruah and Sinha, Monika and Bandyopadhyay, Debades},
+  title = {Equation of state of strongly magnetized matter with hyperons and $\Delta$-resonances},
+  journal = {Phys. Rev. D},
+  volume = {103},
+  pages = {063004},
+  year = {2021}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 11: Hypernuclear matter in strong magnetic field (Monika Sinha) -->
+            <div class="pub-card" data-category="eos">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Hypernuclear matter in strong magnetic field</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> Nuclear Physics A 898, 43–58 (2013)</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 108 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2013 · Nucl. Phys. A</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Monika Sinha</strong>, Banibrata Mukhopadhyay, Armen Sedrakian
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Investigates hyperon populations and equations of state in dense matter subject to strong quantizing magnetic fields, demonstrating how anomalous magnetic moments and field-induced shifts modify the maximum mass and composition.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">Nuclear Physics A 898 (2013) 43-58</div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1016/j.nuclphysa.2012.12.127" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Sinha:2013hypernuclear,
+  author = {Sinha, Monika and Mukhopadhyay, Banibrata and Sedrakian, Armen},
+  title = {Hypernuclear matter in strong magnetic field},
+  journal = {Nucl. Phys. A},
+  volume = {898},
+  pages = {43--58},
+  year = {2013}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 12: Hyperon bulk viscosity (Monika Sinha) -->
+            <div class="pub-card" data-category="eos glitches">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Hyperon bulk viscosity in strong magnetic fields</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> Physical Review D 77, 043008 (2008)</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 32 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2008 · Phys. Rev. D</span>
+              </div>
+              <div class="pub-authors">
+                <strong>Dr. Monika Sinha</strong>, Debades Bandyopadhyay
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Calculates the non-leptonic weak interaction bulk viscosity in hyperon-rich neutron star cores under quantization from strong magnetic fields, establishing dissipation timescales for stellar oscillations.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">Phys. Rev. D 77, 043008</div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1103/PhysRevD.77.043008" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Sinha:2008bulk,
+  author = {Sinha, Monika and Bandyopadhyay, Debades},
+  title = {Hyperon bulk viscosity in strong magnetic fields},
+  journal = {Phys. Rev. D},
+  volume = {77},
+  pages = {043008},
+  year = {2008}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paper 13: Conversion of neutron star to quark star (Mallick, Monika Sinha) -->
+            <div class="pub-card" data-category="eos glitches">
+              <div class="pub-header">
+                <div>
+                  <div class="pub-title">Possible conversion of a neutron star to a quark star in the presence of high magnetic field</div>
+                  <div class="pub-journal-line">
+                    <span class="pub-journal-name"><i class="fa-solid fa-book-open"></i> Monthly Notices of the Royal Astronomical Society (MNRAS) 414, 2712 (2011)</span>
+                    <span class="pub-cite-count"><i class="fa-solid fa-quote-left"></i> 46 Citations</span>
+                  </div>
+                </div>
+                <span class="pub-year-badge">2011 · MNRAS</span>
+              </div>
+              <div class="pub-authors">
+                Ritam Mallick, <strong>Dr. Monika Sinha</strong>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+                Investigates combustion front velocity and phase transition from metastable nuclear matter to strange quark matter under strong magnetic fields, exploring sudden spin-up jumps and energy releases.
+              </p>
+              <div class="pub-meta-row">
+                <div class="pub-journal">MNRAS 414, 2712</div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1111/j.1365-2966.2011.18585.x" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Paper
+                  </a>
+                  <button type="button" class="copy-bibtex-btn" data-bibtex="@article{Mallick:2011quark,
+  author = {Mallick, Ritam and Sinha, Monika},
+  title = {Possible conversion of a neutron star to a quark star in the presence of high magnetic field},
+  journal = {MNRAS},
+  volume = {414},
+  pages = {2712},
+  year = {2011}
+}">
+                    <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 2rem;">
+          <a href="#outreach" class="btn-primary">
+            <i class="fa-solid fa-globe"></i> Next: Outreach &amp; Conferences
+          </a>
+          <a href="#vortex" class="btn-secondary">
+            <i class="fa-solid fa-tornado"></i> Back to Glitches &amp; Pasta
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PAGE 8: OUTREACH & CONFERENCES (EOS Portals & Weekly Conference Calendar)
+         ========================================================================= -->
+    <section id="outreach" class="content-section" data-section="outreach">
+      <div class="minimal-card wide" style="--card-accent: var(--color-cyan);">
+        <span class="section-tag cyan">Global Portals &amp; Community Calendar</span>
+        <h2 class="section-title">Astrophysics <span class="cyan">Outreach &amp; EOS Hub</span></h2>
+        <p class="section-subtitle">Premier online repositories for neutron star equations of state, community code pipelines, and weekly-updated conference agendas</p>
+
+        <!-- OUTREACH INTRO BOX -->
+        <div class="outreach-intro-box">
+          <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-white); margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-network-wired text-cyan"></i> Bridging Nuclear Theory with Global Astrophysics
+          </h3>
+          <p class="section-p" style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+            Neutron star physics relies on open science, community-standard equations of state, and global observational data. This hub gathers essential digital infrastructure for researchers, students, and educators studying the dense-matter equation of state (EOS), relativistic numerical relativity, and pulsar timing.
+          </p>
+          <p class="section-p" style="font-size: 0.88rem;">
+            Below you will find curated portals for EOS tables, open-source relativistic codes, and an international conference schedule that is <strong class="text-orange">updated weekly</strong> with upcoming workshops, symposia, and call-for-papers in nuclear astrophysics.
+          </p>
+        </div>
+
+        <!-- SECTION 1: ESSENTIAL EOS REPOSITORIES & TOOLS -->
+        <div style="margin-top: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-white);">
+              <i class="fa-solid fa-database text-orange"></i> Essential Equation of State (EOS) Portals &amp; Tools
+            </h3>
+            <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--color-cyan);">
+              Microphysics Tables · Relativistic TOV Solvers
+            </span>
+          </div>
+
+          <div class="eos-portals-grid">
+            
+            <!-- Portal 1: CompOSE -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge">Primary International Archive</div>
+                <div class="eos-portal-title text-orange">CompOSE Database</div>
+                <p class="eos-portal-desc">
+                  <strong>CompStar Online Supernovae Equations of State.</strong> The standard international repository providing standardized, thermodynamic microphysical tables across wide grids of baryon density ($n_B$), temperature ($T$), and proton fraction ($Y_p$). Essential for core-collapse supernovae, proto-neutron stars, and binary mergers.
+                </p>
+              </div>
+              <a href="https://compose.obspm.fr/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> compose.obspm.fr
+              </a>
+            </div>
+
+            <!-- Portal 2: MUSES Collaboration -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge" style="color: var(--color-cyan);">Modular Cyberinfrastructure</div>
+                <div class="eos-portal-title text-cyan">MUSES Collaboration</div>
+                <p class="eos-portal-desc">
+                  <strong>Modular Unified Solver for the Equation of State.</strong> An NSF-funded multi-institutional effort developing open-source cyberinfrastructure that calculates dense-matter equations of state across finite temperature and density, incorporating crossover phase transitions from hadronic to deconfined quark matter.
+                </p>
+              </div>
+              <a href="https://muses.physics.illinois.edu/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> muses.physics.illinois.edu
+              </a>
+            </div>
+
+            <!-- Portal 3: O2scl Library -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge" style="color: #a855f7;">C++ Nuclear Physics Library</div>
+                <div class="eos-portal-title" style="color: #c084fc;">O2scl Library</div>
+                <p class="eos-portal-desc">
+                  <strong>Object-Oriented Scientific Computing Library.</strong> Maintained by Andrew Steiner. Provides robust C++ classes for dense matter equations of state, Tolman-Oppenheimer-Volkoff (TOV) relativistic integrations, Bayesian mass-radius posterior inversions, and crust-core interfaces.
+                </p>
+              </div>
+              <a href="https://awsteiner.org/code/o2scl/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> awsteiner.org/code/o2scl
+              </a>
+            </div>
+
+            <!-- Portal 4: LORENE -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge">Numerical Relativity</div>
+                <div class="eos-portal-title text-white">LORENE Spectral Library</div>
+                <p class="eos-portal-desc">
+                  <strong>Langage Objet pour la RElativité Numérique.</strong> Spectral methods library for constructing rapidly rotating axisymmetric and triaxial relativistic compact stars, magnetized equilibrium states, and binary neutron star initial data configurations.
+                </p>
+              </div>
+              <a href="https://lorene.obspm.fr/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> lorene.obspm.fr
+              </a>
+            </div>
+
+            <!-- Portal 5: NSCool Code -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge" style="color: var(--color-red);">Relativistic Thermal Transport</div>
+                <div class="eos-portal-title text-red">NSCool Evolution Code</div>
+                <p class="eos-portal-desc">
+                  <strong>Dany Page's Relativistic Thermal Evolution Code.</strong> Solves the coupled equations of energy transport and neutrino emissivity in general relativity, accounting for pairing critical temperatures ($T_c$), superfluid gaps, magnetic field decay, and crust heating.
+                </p>
+              </div>
+              <a href="http://www.astroscu.unam.mx/neutrons/NSCool/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> astroscu.unam.mx/neutrons/NSCool
+              </a>
+            </div>
+
+            <!-- Portal 6: GWOSC -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge" style="color: var(--color-cyan);">Gravitational Wave Open Data</div>
+                <div class="eos-portal-title text-cyan">GWOSC (LIGO / Virgo / KAGRA)</div>
+                <p class="eos-portal-desc">
+                  <strong>Gravitational Wave Open Science Center.</strong> Public strain data, parameter estimation posteriors, and Python/Jupyter tutorials for binary neutron star mergers (GW170817, GW190425) and neutron star-black hole systems (GW190814, GW200105).
+                </p>
+              </div>
+              <a href="https://gw-openscience.org/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> gw-openscience.org
+              </a>
+            </div>
+
+            <!-- Portal 7: NASA NICER HEASARC -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge">X-Ray Pulse Profile Modeling</div>
+                <div class="eos-portal-title text-orange">NASA NICER / HEASARC Data</div>
+                <p class="eos-portal-desc">
+                  <strong>Neutron star Interior Composition Explorer.</strong> High-precision X-ray timing data on the International Space Station, delivering simultaneous mass and radius measurements for millisecond pulsars (PSR J0030+0451, PSR J0740+6620, PSR J0437-4715).
+                </p>
+              </div>
+              <a href="https://heasarc.gsfc.nasa.gov/docs/nicer/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> heasarc.gsfc.nasa.gov/docs/nicer
+              </a>
+            </div>
+
+            <!-- Portal 8: ATNF Pulsar Catalogue -->
+            <div class="eos-portal-card">
+              <div>
+                <div class="eos-portal-badge">Observational Database</div>
+                <div class="eos-portal-title text-white">ATNF Pulsar Catalogue</div>
+                <p class="eos-portal-desc">
+                  <strong>Australia Telescope National Facility.</strong> Global database compiling measured period ($P$), period derivative ($\dot{P}$), surface magnetic field ($B_s$), characteristic age ($\tau$), and dispersion measures for over 3,300 pulsars.
+                </p>
+              </div>
+              <a href="https://www.atnf.csiro.au/research/pulsar/psrcat/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> atnf.csiro.au/research/pulsar/psrcat
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SECTION 2: UPCOMING CONFERENCES & WORKSHOPS (UPDATED WEEKLY) -->
+        <div class="conferences-section">
+          <div class="weekly-schedule-header">
+            <div>
+              <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-white);">
+                <i class="fa-solid fa-calendar-days text-orange"></i> Upcoming Conferences &amp; Workshops
+              </h3>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                International gatherings on nuclear astrophysics, dense QCD matter, pulsar glitches, and compact objects.
+              </p>
+            </div>
+            <div class="weekly-live-badge">
+              <i class="fa-solid fa-arrows-rotate"></i> Updated Weekly
+            </div>
+          </div>
+
+          <div class="conferences-grid">
+
+            <!-- Conference 1: Quark Matter -->
+            <div class="conference-card" style="--conf-accent: var(--color-orange);">
+              <div>
+                <div class="conf-meta-top">
+                  <span class="conf-date-badge"><i class="fa-regular fa-calendar"></i> Biennial Series</span>
+                  <span class="conf-status-tag">Major Global Meeting</span>
+                </div>
+                <div class="conf-title">Quark Matter: International Conference on Ultrarelativistic Nucleus-Nucleus Collisions</div>
+                <div class="conf-venue">
+                  <i class="fa-solid fa-location-dot"></i> International Venue
+                </div>
+                <p class="conf-desc">
+                  The flagship international conference covering high-energy nuclear collisions, the QCD phase diagram, strange quark matter, and high-density hadron-to-quark crossover transitions relevant to neutron star inner cores.
+                </p>
+                <div class="conf-tags">
+                  <span class="conf-tag">Dense QCD</span>
+                  <span class="conf-tag">Quark Matter</span>
+                  <span class="conf-tag">Phase Transitions</span>
+                </div>
+              </div>
+              <a href="https://inspirehep.net/conferences" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Conference Portal
+              </a>
+            </div>
+
+            <!-- Conference 2: CSGW -->
+            <div class="conference-card" style="--conf-accent: var(--color-cyan);">
+              <div>
+                <div class="conf-meta-top">
+                  <span class="conf-date-badge"><i class="fa-regular fa-calendar"></i> Annual Meeting</span>
+                  <span class="conf-status-tag" style="color: var(--color-cyan);">Dedicated Focus</span>
+                </div>
+                <div class="conf-title">Physics of Compact Stars and Gravitational Waves (CSGW)</div>
+                <div class="conf-venue">
+                  <i class="fa-solid fa-location-dot"></i> Europe / Asia
+                </div>
+                <p class="conf-desc">
+                  Focuses on dense matter equations of state, microphysical models of hyperons and $\Delta$-isobars, nuclear pasta crusts, and extracting nuclear parameters from gravitational wave observations and pulsar glitches.
+                </p>
+                <div class="conf-tags">
+                  <span class="conf-tag">Compact Stars</span>
+                  <span class="conf-tag">Gravitational Waves</span>
+                  <span class="conf-tag">Nuclear Pasta</span>
+                </div>
+              </div>
+              <a href="https://inspirehep.net/conferences" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Program &amp; Registration
+              </a>
+            </div>
+
+            <!-- Conference 3: INT Seattle Programs -->
+            <div class="conference-card" style="--conf-accent: var(--color-red);">
+              <div>
+                <div class="conf-meta-top">
+                  <span class="conf-date-badge"><i class="fa-regular fa-calendar"></i> Multi-Week Programs</span>
+                  <span class="conf-status-tag" style="color: var(--color-red);">Workshop Series</span>
+                </div>
+                <div class="conf-title">INT Seattle: Institute for Nuclear Theory Programs</div>
+                <div class="conf-venue">
+                  <i class="fa-solid fa-location-dot"></i> University of Washington, Seattle, USA
+                </div>
+                <p class="conf-desc">
+                  Multi-week thematic workshops gathering world-leading theoretical physicists to solve core problems in neutron star crusts, nuclear pasta, neutrino transport, and multi-messenger constraints on nuclear symmetry energy.
+                </p>
+                <div class="conf-tags">
+                  <span class="conf-tag">INT Seattle</span>
+                  <span class="conf-tag">Microscopic Theory</span>
+                  <span class="conf-tag">Superfluidity</span>
+                </div>
+              </div>
+              <a href="https://www.int.washington.edu/programs" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> int.washington.edu/programs
+              </a>
+            </div>
+
+            <!-- Conference 4: ECT* Trento Workshops -->
+            <div class="conference-card" style="--conf-accent: #a855f7;">
+              <div>
+                <div class="conf-meta-top">
+                  <span class="conf-date-badge"><i class="fa-regular fa-calendar"></i> Regular Symposia</span>
+                  <span class="conf-status-tag" style="color: #c084fc;">European Center</span>
+                </div>
+                <div class="conf-title">ECT* Workshops on Dense Matter &amp; Compact Stars</div>
+                <div class="conf-venue">
+                  <i class="fa-solid fa-location-dot"></i> ECT*, Trento, Italy
+                </div>
+                <p class="conf-desc">
+                  Focused workshops hosted at the European Centre for Theoretical Studies in Nuclear Physics, covering hypernuclear physics, antikaon condensation, transport properties, and cooling curves in extreme astrophysical environments.
+                </p>
+                <div class="conf-tags">
+                  <span class="conf-tag">ECT* Trento</span>
+                  <span class="conf-tag">Hypernuclear Matter</span>
+                  <span class="conf-tag">Antikaons</span>
+                </div>
+              </div>
+              <a href="https://www.ectstar.eu/workshops/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> ectstar.eu/workshops
+              </a>
+            </div>
+
+            <!-- Conference 5: PHAROS Conference -->
+            <div class="conference-card" style="--conf-accent: #10b981;">
+              <div>
+                <div class="conf-meta-top">
+                  <span class="conf-date-badge"><i class="fa-regular fa-calendar"></i> Annual COST Series</span>
+                  <span class="conf-status-tag" style="color: #34d399;">Multi-Messenger</span>
+                </div>
+                <div class="conf-title">PHAROS: Multi-Messenger Physics of Neutron Stars</div>
+                <div class="conf-venue">
+                  <i class="fa-solid fa-location-dot"></i> European Consortia / Hybrid
+                </div>
+                <p class="conf-desc">
+                  International COST Action conference uniting astrophysicists, nuclear theorists, and gravitational-wave observers to synthesize data from radio pulsars, magnetar flares, NICER X-ray modeling, and LIGO-Virgo-KAGRA detections.
+                </p>
+                <div class="conf-tags">
+                  <span class="conf-tag">PHAROS</span>
+                  <span class="conf-tag">Radio Timing</span>
+                  <span class="conf-tag">Magnetars</span>
+                </div>
+              </div>
+              <a href="https://inspirehep.net/conferences" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Event Information
+              </a>
+            </div>
+
+            <!-- Conference 6: DAE-BRNS Symposium (India) -->
+            <div class="conference-card" style="--conf-accent: var(--color-orange);">
+              <div>
+                <div class="conf-meta-top">
+                  <span class="conf-date-badge"><i class="fa-regular fa-calendar"></i> Annual National Symposium</span>
+                  <span class="conf-status-tag">India National</span>
+                </div>
+                <div class="conf-title">DAE-BRNS Symposium on Nuclear Physics &amp; High Energy Physics</div>
+                <div class="conf-venue">
+                  <i class="fa-solid fa-location-dot"></i> Major Indian Research Centers (DAE / IITs)
+                </div>
+                <p class="conf-desc">
+                  The primary Indian national conference in nuclear and particle physics, featuring dedicated oral and poster sessions on dense nuclear matter, equations of state, and astrophysical compact stars.
+                </p>
+                <div class="conf-tags">
+                  <span class="conf-tag">DAE-BRNS</span>
+                  <span class="conf-tag">National Symposium</span>
+                  <span class="conf-tag">India Physics</span>
+                </div>
+              </div>
+              <a href="https://www.sympnp.org/" target="_blank" rel="noopener noreferrer" class="sw-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> sympnp.org
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-top: 2rem;">
+          <a href="#overview" class="btn-primary">
+            <i class="fa-solid fa-arrow-up"></i> Return to Top
+          </a>
+          <a href="#group" class="btn-secondary">
+            <i class="fa-solid fa-users"></i> Our Research Group
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER & ATTRIBUTION (As explicitly requested by User) -->
+  <footer class="site-footer">
+    <div class="footer-quote">
+      "Neutron stars connect the physics of the smallest subatomic scales with the largest astronomical scales. Their interiors contain matter under extreme density, temperature, magnetic field, and gravitational conditions. By studying their structure, composition, cooling, rotation, glitches, and gravitational waves, we can probe the fundamental properties of dense matter."
+    </div>
+    <div class="footer-designer">
+      designed by <span>Yogeesh N</span>
+    </div>
+    <div>
+      <a href="mailto:yoguyamu@gmail.com" class="footer-email">yoguyamu@gmail.com</a>
+    </div>
+  </footer>
+
+  <!-- EXTERNAL LIBRARIES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="js/audio.js"></script>
+  <script src="js/star3d.js"></script>
+  <script src="js/vortex-animation.js"></script>
+  <script src="js/simulations.js"></script>
+  <script src="js/scrollytelling.js"></script>
+  <script src="js/group.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
