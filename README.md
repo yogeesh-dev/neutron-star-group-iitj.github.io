@@ -77,7 +77,7 @@ http://localhost:8000/
 - **Interactive Group Directory**: Small photo frame with client-side upload/reset and persistent local storage caching for:
   - **Dr. Monika Sinha** (Associate Professor, Group Lead)
   - **Dr. Vivek Baruah Thapa** (Postdoctoral Researcher)
-  - **Dr. Anil Kumar** (Former PhD Scholar; now Postdoctoral Researcher at University of Wrocław, Poland; Strange Quark Matter)
+  - **Dr. Anil Kumar** (Former PhD Scholar; now Postdoctoral Researcher at Institute of Theoretical Physics, Wroclaw University of Science and Technology, Wroclaw, Poland; QCD phase transitions, Equation of state, nuclear theory)
   - **Dr. Vishal Parmar** (Former PhD Scholar; now Postdoctoral Researcher at INFN Pisa, Italy)
   - **Yogeesh N.** (Research Scholar, Dept of Physics, IIT Jodhpur)
   - **Athira S.** (Research Scholar, Dept of Physics, IIT Jodhpur)

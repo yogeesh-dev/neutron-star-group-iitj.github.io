@@ -62,7 +62,7 @@
         "@type": "Person",
         "name": "Dr. Anil Kumar",
         "jobTitle": "Former PhD Scholar",
-        "affiliation": "University of Wrocław"
+        "affiliation": "Institute of Theoretical Physics, Wroclaw University of Science and Technology, Poland"
       },
       {
         "@type": "Person",
@@ -137,11 +137,14 @@
       <button id="fullscreen-toggle-btn" class="icon-btn" title="Toggle Fullscreen">
         <i class="fa-solid fa-expand"></i>
       </button>
+      <button id="mobile-menu-btn" class="icon-btn mobile-menu-btn" title="Toggle Navigation Menu" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </header>
 
-  <!-- FLOATING BOTTOM 3D CONTROLS DOCK -->
-  <div class="viewport-dock">
+  <!-- FLOATING BOTTOM 3D CONTROLS DOCK (Smoothly disappears on scroll) -->
+  <div class="viewport-dock" id="viewport-dock">
     <div class="dock-item">
       <span class="dock-label"><i class="fa-solid fa-scissors"></i> Cutaway:</span>
       <input type="range" id="dock-cutaway-slider" class="dock-slider" min="0" max="180" value="90" title="Adjust Cutaway Wedge Angle (C)">
@@ -157,6 +160,10 @@
 
     <button id="dock-reset-btn" class="dock-btn" title="Reset Camera View">
       <i class="fa-solid fa-rotate-left"></i> Reset
+    </button>
+
+    <button id="dock-close-btn" class="dock-close-btn" title="Dismiss Controls" aria-label="Close 3D controls">
+      <i class="fa-solid fa-xmark"></i>
     </button>
   </div>
 
@@ -1129,16 +1136,16 @@
                   <div class="member-name">Dr. Anil Kumar</div>
                   <span class="member-status-tag" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Postdoctoral Researcher</span>
                 </div>
-                <div class="member-title">Postdoctoral Researcher, University of Wrocław, Poland</div>
-                <div class="member-affil">Former PhD Scholar, Department of Physics, IIT Jodhpur · Institute of Theoretical Physics, University of Wrocław</div>
+                <div class="member-title">Postdoctoral Researcher, Institute of Theoretical Physics</div>
+                <div class="member-affil">Wroclaw University of Science and Technology, Wroclaw, Poland · Former PhD Scholar, IIT Jodhpur</div>
                 <p class="member-topics">
-                  <strong>Primary Research:</strong> Strange Quark Matter, quark-hadron phase transitions, universal relations for compact stars with exotic degrees of freedom, and dark-matter admixed neutron stars.
+                  <strong>Research Interests:</strong> QCD phase transitions, Equation of state, and nuclear theory.
                 </p>
                 <div class="member-tags">
-                  <span class="member-tag">Strange Quark Matter</span>
-                  <span class="member-tag">Univ of Wrocław</span>
-                  <span class="member-tag">Universal Relations</span>
-                  <span class="member-tag">Dark Matter</span>
+                  <span class="member-tag">QCD Phase Transitions</span>
+                  <span class="member-tag">Equation of State</span>
+                  <span class="member-tag">Nuclear Theory</span>
+                  <span class="member-tag">Wrocław Univ of Sci &amp; Tech</span>
                 </div>
               </div>
             </div>
@@ -1281,30 +1288,40 @@
             <div class="alumni-grid">
               <!-- Alumni 1: Pratik Thakur -->
               <div class="alumni-card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
-                  <strong style="color: var(--text-white); font-family: var(--font-display); font-size: 0.98rem;">Pratik Thakur</strong>
-                  <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #c084fc;">PhD Scholar, Virginia (USA)</span>
+                <div class="alumni-photo-frame">
+                  <img src="assets/images/members/pratik_thakur.jpg" alt="Pratik Thakur" class="alumni-avatar-img" onerror="this.parentElement.style.display='none'">
                 </div>
-                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan); margin-bottom: 0.4rem;">
-                  Former MSc Thesis Student · IIT Jodhpur
+                <div class="alumni-body">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem; flex-wrap: wrap; gap: 0.3rem;">
+                    <strong style="color: var(--text-white); font-family: var(--font-display); font-size: 0.98rem;">Pratik Thakur</strong>
+                    <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #c084fc;">PhD Scholar, Virginia (USA)</span>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan); margin-bottom: 0.4rem;">
+                    Former MSc Thesis Student · IIT Jodhpur
+                  </div>
+                  <p style="font-size: 0.79rem; color: #94a3b8; line-height: 1.45;">
+                    <strong>Thesis Research:</strong> Investigated <strong>Dark Matter</strong> in compact stars, non-radial quadrupolar oscillation modes ($f$-modes, $p$-modes), and two-fluid general relativistic equations of state.
+                  </p>
                 </div>
-                <p style="font-size: 0.79rem; color: #94a3b8; line-height: 1.45;">
-                  <strong>Thesis Research:</strong> Investigated <strong>Dark Matter</strong> in compact stars, non-radial quadrupolar oscillation modes ($f$-modes, $p$-modes), and two-fluid general relativistic equations of state.
-                </p>
               </div>
 
               <!-- Alumni 2: Manoj Kumar Ghosh -->
               <div class="alumni-card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
-                  <strong style="color: var(--text-white); font-family: var(--font-display); font-size: 0.98rem;">Manoj Kumar Ghosh</strong>
-                  <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #c084fc;">PhD Scholar, Virginia (USA)</span>
+                <div class="alumni-photo-frame">
+                  <img src="assets/images/members/manoj_ghosh.jpg" alt="Manoj Kumar Ghosh" class="alumni-avatar-img" onerror="this.parentElement.style.display='none'">
                 </div>
-                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan); margin-bottom: 0.4rem;">
-                  Former MSc Thesis Student · IIT Jodhpur
+                <div class="alumni-body">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem; flex-wrap: wrap; gap: 0.3rem;">
+                    <strong style="color: var(--text-white); font-family: var(--font-display); font-size: 0.98rem;">Manoj Kumar Ghosh</strong>
+                    <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #c084fc;">PhD Scholar, Virginia (USA)</span>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-cyan); margin-bottom: 0.4rem;">
+                    Former MSc Thesis Student · IIT Jodhpur
+                  </div>
+                  <p style="font-size: 0.79rem; color: #94a3b8; line-height: 1.45;">
+                    <strong>Thesis Research:</strong> Investigated <strong>Ambipolar Diffusion</strong> in neutron stars and universal relations for compact stars with exotic degrees of freedom.
+                  </p>
                 </div>
-                <p style="font-size: 0.79rem; color: #94a3b8; line-height: 1.45;">
-                  <strong>Thesis Research:</strong> Investigated <strong>Ambipolar Diffusion</strong> in neutron stars and universal relations for compact stars with exotic degrees of freedom.
-                </p>
               </div>
             </div>
           </div>
